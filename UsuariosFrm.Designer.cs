@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             label1 = new System.Windows.Forms.Label();
             lblusuario = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -46,15 +46,6 @@
             btnEliminar = new FontAwesome.Sharp.IconButton();
             btnEditar = new FontAwesome.Sharp.IconButton();
             dgvData = new System.Windows.Forms.DataGridView();
-            btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            UsuarioId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            RolId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             label8 = new System.Windows.Forms.Label();
             txtId = new System.Windows.Forms.TextBox();
             label6 = new System.Windows.Forms.Label();
@@ -62,6 +53,15 @@
             txtBuscar = new System.Windows.Forms.TextBox();
             btnBuscar = new FontAwesome.Sharp.IconButton();
             btnLimpiar = new FontAwesome.Sharp.IconButton();
+            txtIndice = new System.Windows.Forms.TextBox();
+            btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            UsuarioId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            RolId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -118,6 +118,7 @@
             txtUsuarioID.Name = "txtUsuarioID";
             txtUsuarioID.Size = new System.Drawing.Size(205, 24);
             txtUsuarioID.TabIndex = 4;
+           
             // 
             // txtNombre
             // 
@@ -132,7 +133,6 @@
             txtContrasena.Font = new System.Drawing.Font("Sitka Small", 9.75F);
             txtContrasena.Location = new System.Drawing.Point(28, 218);
             txtContrasena.Name = "txtContrasena";
-            txtContrasena.PasswordChar = '*';
             txtContrasena.Size = new System.Drawing.Size(205, 24);
             txtContrasena.TabIndex = 6;
             // 
@@ -185,7 +185,6 @@
             txtConfirmContra.Font = new System.Drawing.Font("Sitka Small", 9.75F);
             txtConfirmContra.Location = new System.Drawing.Point(28, 294);
             txtConfirmContra.Name = "txtConfirmContra";
-            txtConfirmContra.PasswordChar = '*';
             txtConfirmContra.Size = new System.Drawing.Size(205, 24);
             txtConfirmContra.TabIndex = 13;
             // 
@@ -265,17 +264,17 @@
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, UsuarioId, Username, Password, FechaRegistro, Rol, RolId, EstadoValor, Estado });
+            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, UsuarioId, Username, Password, Rol, RolId, EstadoValor, Estado });
             dgvData.Location = new System.Drawing.Point(272, 73);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
@@ -283,68 +282,7 @@
             dgvData.Size = new System.Drawing.Size(770, 512);
             dgvData.TabIndex = 18;
             dgvData.CellContentClick += dgvData_CellContentClick;
-            // 
-            // btnSeleccionar
-            // 
-            btnSeleccionar.HeaderText = "";
-            btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.ReadOnly = true;
-            btnSeleccionar.Width = 25;
-            // 
-            // UsuarioId
-            // 
-            UsuarioId.HeaderText = "UsuarioId";
-            UsuarioId.Name = "UsuarioId";
-            UsuarioId.ReadOnly = true;
-            UsuarioId.Visible = false;
-            // 
-            // Username
-            // 
-            Username.HeaderText = "Nombre de Usuario";
-            Username.Name = "Username";
-            Username.ReadOnly = true;
-            Username.Width = 300;
-            // 
-            // Password
-            // 
-            Password.HeaderText = "Contraseña";
-            Password.Name = "Password";
-            Password.ReadOnly = true;
-            Password.Visible = false;
-            // 
-            // FechaRegistro
-            // 
-            FechaRegistro.HeaderText = "Fecha Registro";
-            FechaRegistro.Name = "FechaRegistro";
-            FechaRegistro.ReadOnly = true;
-            // 
-            // Rol
-            // 
-            Rol.HeaderText = "Rol";
-            Rol.Name = "Rol";
-            Rol.ReadOnly = true;
-            Rol.Width = 200;
-            // 
-            // RolId
-            // 
-            RolId.HeaderText = "RolId";
-            RolId.Name = "RolId";
-            RolId.ReadOnly = true;
-            RolId.Visible = false;
-            // 
-            // EstadoValor
-            // 
-            EstadoValor.HeaderText = "EstadoValor";
-            EstadoValor.Name = "EstadoValor";
-            EstadoValor.ReadOnly = true;
-            EstadoValor.Visible = false;
-            // 
-            // Estado
-            // 
-            Estado.HeaderText = "Estado";
-            Estado.Name = "Estado";
-            Estado.ReadOnly = true;
-            Estado.Width = 180;
+            dgvData.CellPainting += dgvData_CellPainting;
             // 
             // label8
             // 
@@ -365,8 +303,7 @@
             txtId.Name = "txtId";
             txtId.Size = new System.Drawing.Size(29, 24);
             txtId.TabIndex = 20;
-            txtId.Text = "0";
-            txtId.Visible = false;
+            
             // 
             // label6
             // 
@@ -435,12 +372,78 @@
             btnLimpiar.TabIndex = 24;
             btnLimpiar.UseVisualStyleBackColor = false;
             // 
+            // txtIndice
+            // 
+            txtIndice.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtIndice.Location = new System.Drawing.Point(169, 35);
+            txtIndice.Name = "txtIndice";
+            txtIndice.Size = new System.Drawing.Size(29, 24);
+            txtIndice.TabIndex = 26;
+            txtIndice.Text = "0";
+            // 
+            // btnSeleccionar
+            // 
+            btnSeleccionar.HeaderText = "";
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.ReadOnly = true;
+            btnSeleccionar.Width = 30;
+            // 
+            // UsuarioId
+            // 
+            UsuarioId.HeaderText = "UsuarioId";
+            UsuarioId.Name = "UsuarioId";
+            UsuarioId.ReadOnly = true;
+            UsuarioId.Visible = false;
+            // 
+            // Username
+            // 
+            Username.HeaderText = "Nombre de Usuario";
+            Username.Name = "Username";
+            Username.ReadOnly = true;
+            Username.Width = 300;
+            // 
+            // Password
+            // 
+            Password.HeaderText = "Contraseña";
+            Password.Name = "Password";
+            Password.ReadOnly = true;
+            Password.Visible = false;
+            // 
+            // Rol
+            // 
+            Rol.HeaderText = "Rol";
+            Rol.Name = "Rol";
+            Rol.ReadOnly = true;
+            Rol.Width = 200;
+            // 
+            // RolId
+            // 
+            RolId.HeaderText = "RolId";
+            RolId.Name = "RolId";
+            RolId.ReadOnly = true;
+            RolId.Visible = false;
+            // 
+            // EstadoValor
+            // 
+            EstadoValor.HeaderText = "EstadoValor";
+            EstadoValor.Name = "EstadoValor";
+            EstadoValor.ReadOnly = true;
+            EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
+            Estado.ReadOnly = true;
+            Estado.Width = 180;
+            // 
             // UsuariosFrm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.AliceBlue;
             ClientSize = new System.Drawing.Size(1043, 585);
+            Controls.Add(txtIndice);
             Controls.Add(btnBuscar);
             Controls.Add(btnLimpiar);
             Controls.Add(txtBuscar);
@@ -499,11 +502,11 @@
         private System.Windows.Forms.TextBox txtBuscar;
         public FontAwesome.Sharp.IconButton btnLimpiar;
         public FontAwesome.Sharp.IconButton btnBuscar;
+        private System.Windows.Forms.TextBox txtIndice;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn RolId;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
