@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             label1 = new System.Windows.Forms.Label();
             lblusuario = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             label4 = new System.Windows.Forms.Label();
-            txtUsuarioID = new System.Windows.Forms.TextBox();
+            txtCodigo = new System.Windows.Forms.TextBox();
             txtNombre = new System.Windows.Forms.TextBox();
             txtContrasena = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
@@ -44,24 +44,25 @@
             ConfirContra = new System.Windows.Forms.Label();
             btnGuardar = new FontAwesome.Sharp.IconButton();
             btnEliminar = new FontAwesome.Sharp.IconButton();
-            btnEditar = new FontAwesome.Sharp.IconButton();
-            dgvData = new System.Windows.Forms.DataGridView();
-            label8 = new System.Windows.Forms.Label();
-            txtId = new System.Windows.Forms.TextBox();
-            label6 = new System.Windows.Forms.Label();
-            cboBuscar = new System.Windows.Forms.ComboBox();
-            txtBuscar = new System.Windows.Forms.TextBox();
-            btnBuscar = new FontAwesome.Sharp.IconButton();
             btnLimpiar = new FontAwesome.Sharp.IconButton();
-            txtIndice = new System.Windows.Forms.TextBox();
+            dgvData = new System.Windows.Forms.DataGridView();
             btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             UsuarioId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             RolId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            label8 = new System.Windows.Forms.Label();
+            txtUsuarioID = new System.Windows.Forms.TextBox();
+            label6 = new System.Windows.Forms.Label();
+            cboBuscar = new System.Windows.Forms.ComboBox();
+            txtBuscar = new System.Windows.Forms.TextBox();
+            btnBuscar = new FontAwesome.Sharp.IconButton();
+            btnLimpiarBuscador = new FontAwesome.Sharp.IconButton();
+            txtIndice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -71,7 +72,7 @@
             label1.Dock = System.Windows.Forms.DockStyle.Left;
             label1.Location = new System.Drawing.Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(266, 585);
+            label1.Size = new System.Drawing.Size(266, 556);
             label1.TabIndex = 0;
             label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -83,9 +84,9 @@
             lblusuario.ForeColor = System.Drawing.Color.AliceBlue;
             lblusuario.Location = new System.Drawing.Point(28, 40);
             lblusuario.Name = "lblusuario";
-            lblusuario.Size = new System.Drawing.Size(89, 19);
+            lblusuario.Size = new System.Drawing.Size(61, 19);
             lblusuario.TabIndex = 1;
-            lblusuario.Text = "Usuario ID:";
+            lblusuario.Text = "Codigo:";
             // 
             // label3
             // 
@@ -111,14 +112,13 @@
             label4.TabIndex = 3;
             label4.Text = "Nombre:";
             // 
-            // txtUsuarioID
+            // txtCodigo
             // 
-            txtUsuarioID.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtUsuarioID.Location = new System.Drawing.Point(28, 73);
-            txtUsuarioID.Name = "txtUsuarioID";
-            txtUsuarioID.Size = new System.Drawing.Size(205, 24);
-            txtUsuarioID.TabIndex = 4;
-           
+            txtCodigo.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtCodigo.Location = new System.Drawing.Point(28, 73);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new System.Drawing.Size(205, 24);
+            txtCodigo.TabIndex = 4;
             // 
             // txtNombre
             // 
@@ -169,6 +169,7 @@
             cboRol.Name = "cboRol";
             cboRol.Size = new System.Drawing.Size(205, 27);
             cboRol.TabIndex = 10;
+            cboRol.SelectedIndexChanged += cboRol_SelectedIndexChanged;
             // 
             // cboEstado
             // 
@@ -240,49 +241,113 @@
             btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
-            // btnEditar
+            // btnLimpiar
             // 
-            btnEditar.BackColor = System.Drawing.SystemColors.HotTrack;
-            btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnEditar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
-            btnEditar.ForeColor = System.Drawing.Color.Lavender;
-            btnEditar.IconChar = FontAwesome.Sharp.IconChar.Pen;
-            btnEditar.IconColor = System.Drawing.Color.Black;
-            btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEditar.IconSize = 18;
-            btnEditar.Location = new System.Drawing.Point(140, 485);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new System.Drawing.Size(97, 30);
-            btnEditar.TabIndex = 16;
-            btnEditar.Text = "Editar";
-            btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            btnEditar.UseVisualStyleBackColor = false;
+            btnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack;
+            btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLimpiar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
+            btnLimpiar.ForeColor = System.Drawing.Color.Lavender;
+            btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnLimpiar.IconColor = System.Drawing.Color.Black;
+            btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiar.IconSize = 18;
+            btnLimpiar.Location = new System.Drawing.Point(140, 485);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new System.Drawing.Size(97, 30);
+            btnLimpiar.TabIndex = 16;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // dgvData
             // 
             dgvData.AllowUserToAddRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, UsuarioId, Username, Password, Rol, RolId, EstadoValor, Estado });
+            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, UsuarioId, Codigo, Username, Password, Rol, RolId, EstadoValor, Estado });
             dgvData.Location = new System.Drawing.Point(272, 73);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dgvData.Size = new System.Drawing.Size(770, 512);
+            dgvData.Size = new System.Drawing.Size(877, 483);
             dgvData.TabIndex = 18;
             dgvData.CellContentClick += dgvData_CellContentClick;
             dgvData.CellPainting += dgvData_CellPainting;
+            // 
+            // btnSeleccionar
+            // 
+            btnSeleccionar.HeaderText = "";
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.ReadOnly = true;
+            btnSeleccionar.Width = 30;
+            // 
+            // UsuarioId
+            // 
+            UsuarioId.HeaderText = "UsuarioId";
+            UsuarioId.Name = "UsuarioId";
+            UsuarioId.ReadOnly = true;
+            UsuarioId.Visible = false;
+            // 
+            // Codigo
+            // 
+            Codigo.HeaderText = "Codigo";
+            Codigo.Name = "Codigo";
+            Codigo.ReadOnly = true;
+            // 
+            // Username
+            // 
+            Username.HeaderText = "Nombre de Usuario";
+            Username.Name = "Username";
+            Username.ReadOnly = true;
+            Username.Width = 350;
+            // 
+            // Password
+            // 
+            Password.HeaderText = "Contraseña";
+            Password.Name = "Password";
+            Password.ReadOnly = true;
+            Password.Visible = false;
+            // 
+            // Rol
+            // 
+            Rol.HeaderText = "Rol";
+            Rol.Name = "Rol";
+            Rol.ReadOnly = true;
+            Rol.Width = 250;
+            // 
+            // RolId
+            // 
+            RolId.HeaderText = "RolId";
+            RolId.Name = "RolId";
+            RolId.ReadOnly = true;
+            RolId.Visible = false;
+            // 
+            // EstadoValor
+            // 
+            EstadoValor.HeaderText = "EstadoValor";
+            EstadoValor.Name = "EstadoValor";
+            EstadoValor.ReadOnly = true;
+            EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
+            Estado.ReadOnly = true;
+            Estado.Width = 200;
             // 
             // label8
             // 
@@ -291,19 +356,20 @@
             label8.ForeColor = System.Drawing.Color.AliceBlue;
             label8.Location = new System.Drawing.Point(272, 0);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(770, 70);
+            label8.Size = new System.Drawing.Size(877, 70);
             label8.TabIndex = 19;
-            label8.Text = "Lista de Usuarios:";
+            label8.Text = "LISTA DE USUARIOS:";
             label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtId
+            // txtUsuarioID
             // 
-            txtId.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtId.Location = new System.Drawing.Point(204, 35);
-            txtId.Name = "txtId";
-            txtId.Size = new System.Drawing.Size(29, 24);
-            txtId.TabIndex = 20;
-            
+            txtUsuarioID.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtUsuarioID.Location = new System.Drawing.Point(203, 12);
+            txtUsuarioID.Name = "txtUsuarioID";
+            txtUsuarioID.Size = new System.Drawing.Size(29, 24);
+            txtUsuarioID.TabIndex = 20;
+            txtUsuarioID.Text = "0";
+            txtUsuarioID.Visible = false;
             // 
             // label6
             // 
@@ -354,105 +420,52 @@
             btnBuscar.Size = new System.Drawing.Size(49, 27);
             btnBuscar.TabIndex = 25;
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
-            // btnLimpiar
+            // btnLimpiarBuscador
             // 
-            btnLimpiar.BackColor = System.Drawing.Color.SlateBlue;
-            btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnLimpiar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
-            btnLimpiar.ForeColor = System.Drawing.Color.AliceBlue;
-            btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            btnLimpiar.IconColor = System.Drawing.SystemColors.Window;
-            btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnLimpiar.IconSize = 22;
-            btnLimpiar.Location = new System.Drawing.Point(981, 32);
-            btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new System.Drawing.Size(49, 27);
-            btnLimpiar.TabIndex = 24;
-            btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiarBuscador.BackColor = System.Drawing.Color.SlateBlue;
+            btnLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLimpiarBuscador.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
+            btnLimpiarBuscador.ForeColor = System.Drawing.Color.AliceBlue;
+            btnLimpiarBuscador.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btnLimpiarBuscador.IconColor = System.Drawing.SystemColors.Window;
+            btnLimpiarBuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiarBuscador.IconSize = 22;
+            btnLimpiarBuscador.Location = new System.Drawing.Point(981, 32);
+            btnLimpiarBuscador.Name = "btnLimpiarBuscador";
+            btnLimpiarBuscador.Size = new System.Drawing.Size(49, 27);
+            btnLimpiarBuscador.TabIndex = 24;
+            btnLimpiarBuscador.UseVisualStyleBackColor = false;
+            btnLimpiarBuscador.Click += btnLimpiarBuscador_Click;
             // 
             // txtIndice
             // 
             txtIndice.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtIndice.Location = new System.Drawing.Point(169, 35);
+            txtIndice.Location = new System.Drawing.Point(168, 12);
             txtIndice.Name = "txtIndice";
             txtIndice.Size = new System.Drawing.Size(29, 24);
             txtIndice.TabIndex = 26;
             txtIndice.Text = "0";
-            // 
-            // btnSeleccionar
-            // 
-            btnSeleccionar.HeaderText = "";
-            btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.ReadOnly = true;
-            btnSeleccionar.Width = 30;
-            // 
-            // UsuarioId
-            // 
-            UsuarioId.HeaderText = "UsuarioId";
-            UsuarioId.Name = "UsuarioId";
-            UsuarioId.ReadOnly = true;
-            UsuarioId.Visible = false;
-            // 
-            // Username
-            // 
-            Username.HeaderText = "Nombre de Usuario";
-            Username.Name = "Username";
-            Username.ReadOnly = true;
-            Username.Width = 300;
-            // 
-            // Password
-            // 
-            Password.HeaderText = "Contraseña";
-            Password.Name = "Password";
-            Password.ReadOnly = true;
-            Password.Visible = false;
-            // 
-            // Rol
-            // 
-            Rol.HeaderText = "Rol";
-            Rol.Name = "Rol";
-            Rol.ReadOnly = true;
-            Rol.Width = 200;
-            // 
-            // RolId
-            // 
-            RolId.HeaderText = "RolId";
-            RolId.Name = "RolId";
-            RolId.ReadOnly = true;
-            RolId.Visible = false;
-            // 
-            // EstadoValor
-            // 
-            EstadoValor.HeaderText = "EstadoValor";
-            EstadoValor.Name = "EstadoValor";
-            EstadoValor.ReadOnly = true;
-            EstadoValor.Visible = false;
-            // 
-            // Estado
-            // 
-            Estado.HeaderText = "Estado";
-            Estado.Name = "Estado";
-            Estado.ReadOnly = true;
-            Estado.Width = 180;
+            txtIndice.Visible = false;
             // 
             // UsuariosFrm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.AliceBlue;
-            ClientSize = new System.Drawing.Size(1043, 585);
+            ClientSize = new System.Drawing.Size(1152, 556);
             Controls.Add(txtIndice);
             Controls.Add(btnBuscar);
-            Controls.Add(btnLimpiar);
+            Controls.Add(btnLimpiarBuscador);
             Controls.Add(txtBuscar);
             Controls.Add(cboBuscar);
             Controls.Add(label6);
-            Controls.Add(txtId);
+            Controls.Add(txtUsuarioID);
             Controls.Add(label8);
             Controls.Add(dgvData);
-            Controls.Add(btnEditar);
+            Controls.Add(btnLimpiar);
             Controls.Add(btnEliminar);
             Controls.Add(btnGuardar);
             Controls.Add(txtConfirmContra);
@@ -463,7 +476,7 @@
             Controls.Add(label2);
             Controls.Add(txtContrasena);
             Controls.Add(txtNombre);
-            Controls.Add(txtUsuarioID);
+            Controls.Add(txtCodigo);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(lblusuario);
@@ -482,7 +495,7 @@
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtUsuarioID;
+        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Label label2;
@@ -493,18 +506,19 @@
         private System.Windows.Forms.Label ConfirContra;
         public FontAwesome.Sharp.IconButton btnGuardar;
         public FontAwesome.Sharp.IconButton btnEliminar;
-        public FontAwesome.Sharp.IconButton btnEditar;
+        public FontAwesome.Sharp.IconButton btnLimpiar;
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtUsuarioID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
-        public FontAwesome.Sharp.IconButton btnLimpiar;
+        public FontAwesome.Sharp.IconButton btnLimpiarBuscador;
         public FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.TextBox txtIndice;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;

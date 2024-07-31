@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionNotas
 {
-    public partial class EstudiantesFrm : Form
+    public partial class ACEstudiante : Form
     {
-        public EstudiantesFrm()
+        public ACEstudiante()
         {
             InitializeComponent();
         }

@@ -122,7 +122,7 @@
             AsigAcademicas.Name = "AsigAcademicas";
             AsigAcademicas.Size = new System.Drawing.Size(156, 24);
             AsigAcademicas.Text = "Academicas";
-            AsigAcademicas.Click += AsigAcademicas_Click;
+            
             // 
             // MenuReporte
             // 

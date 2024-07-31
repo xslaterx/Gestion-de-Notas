@@ -11,8 +11,6 @@ using BDGestion;
 using System.Data.Entity;
 using CapaEscolar;
 
-
-
 namespace GestionNotas
 {
     public partial class LoginForm : Form
@@ -22,16 +20,20 @@ namespace GestionNotas
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
 
-
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        
+        private bool VerifyPassword(string enteredPassword, string storedHash)
         {
+            // Implement your password verification logic here
+            return enteredPassword == storedHash; // Esto es solo para fines de demostración.
+        }
 
+        private void btnLogin_Click_1(object sender, EventArgs e)
+        {
             List<Usuario> TEST = new CN_Usuario().Listar();
 
 
@@ -48,7 +50,7 @@ namespace GestionNotas
 
                 if (user != null && VerifyPassword(Password, user.Password))
                 {
-                    
+
 
                     string rol = user.Rol.Descripcion.ToLower().Trim();
 
@@ -72,61 +74,14 @@ namespace GestionNotas
                             break;
                     }
 
-                    
+
                 }
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrectas.");
                 }
-            } 
-        }
-        
-
-
-        private bool VerifyPassword(string enteredPassword, string storedHash)
-        {
-            // Implement your password verification logic here
-            return enteredPassword == storedHash; // Esto es solo para fines de demostración.
-        }
-
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsername_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cerrarimg_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-
-        }
-
-        private void minimizarimg_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void minimaxiimg_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Normal) this.WindowState = FormWindowState.Maximized;
-            else this.WindowState = FormWindowState.Normal;
-        }
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
+            }
 
         }
     }
 }
-    
-    
-

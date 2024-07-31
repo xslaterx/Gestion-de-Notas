@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace GestionNotas
 {
-    public partial class AsignaTecnicaFrm : Form
+    public partial class AsignarcaliFrm : Form
     {
-        public AsignaTecnicaFrm()
+        public AsignarcaliFrm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

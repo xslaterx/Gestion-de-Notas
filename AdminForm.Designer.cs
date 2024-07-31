@@ -36,8 +36,6 @@
             MenuEstudiante = new FontAwesome.Sharp.IconMenuItem();
             MenuAula = new FontAwesome.Sharp.IconMenuItem();
             MenuAsignatura = new FontAwesome.Sharp.IconMenuItem();
-            AsigTecnicas = new FontAwesome.Sharp.IconMenuItem();
-            AsigAcademicas = new FontAwesome.Sharp.IconMenuItem();
             MenuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
             MenuReporte = new FontAwesome.Sharp.IconMenuItem();
             MenuAcerca = new FontAwesome.Sharp.IconMenuItem();
@@ -63,7 +61,7 @@
             nombreuser.BackColor = System.Drawing.Color.DarkSlateBlue;
             nombreuser.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             nombreuser.ForeColor = System.Drawing.SystemColors.Control;
-            nombreuser.Location = new System.Drawing.Point(852, 4);
+            nombreuser.Location = new System.Drawing.Point(876, 4);
             nombreuser.Name = "nombreuser";
             nombreuser.Size = new System.Drawing.Size(68, 18);
             nombreuser.TabIndex = 1;
@@ -79,7 +77,7 @@
             menuadmin.Location = new System.Drawing.Point(0, 28);
             menuadmin.Name = "menuadmin";
             menuadmin.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            menuadmin.Size = new System.Drawing.Size(1046, 66);
+            menuadmin.Size = new System.Drawing.Size(1141, 66);
             menuadmin.TabIndex = 4;
             menuadmin.Text = "menuStrip1";
             // 
@@ -146,7 +144,6 @@
             // MenuAsignatura
             // 
             MenuAsignatura.AutoSize = false;
-            MenuAsignatura.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { AsigTecnicas, AsigAcademicas });
             MenuAsignatura.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             MenuAsignatura.IconChar = FontAwesome.Sharp.IconChar.Suitcase;
             MenuAsignatura.IconColor = System.Drawing.Color.Black;
@@ -157,26 +154,7 @@
             MenuAsignatura.Size = new System.Drawing.Size(122, 62);
             MenuAsignatura.Text = "Asignaturas";
             MenuAsignatura.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // AsigTecnicas
-            // 
-            AsigTecnicas.IconChar = FontAwesome.Sharp.IconChar.None;
-            AsigTecnicas.IconColor = System.Drawing.Color.Black;
-            AsigTecnicas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            AsigTecnicas.Name = "AsigTecnicas";
-            AsigTecnicas.Size = new System.Drawing.Size(156, 24);
-            AsigTecnicas.Text = "Tecnicas";
-            AsigTecnicas.Click += AsigTecnicas_Click;
-            // 
-            // AsigAcademicas
-            // 
-            AsigAcademicas.IconChar = FontAwesome.Sharp.IconChar.None;
-            AsigAcademicas.IconColor = System.Drawing.Color.Black;
-            AsigAcademicas.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            AsigAcademicas.Name = "AsigAcademicas";
-            AsigAcademicas.Size = new System.Drawing.Size(156, 24);
-            AsigAcademicas.Text = "Academicas";
-            AsigAcademicas.Click += AsigAcademicas_Click;
+            MenuAsignatura.Click += MenuAsignatura_Click;
             // 
             // MenuMantenimiento
             // 
@@ -227,7 +205,7 @@
             // 
             contenedor.Location = new System.Drawing.Point(0, 97);
             contenedor.Name = "contenedor";
-            contenedor.Size = new System.Drawing.Size(1046, 595);
+            contenedor.Size = new System.Drawing.Size(1141, 608);
             contenedor.TabIndex = 5;
             // 
             // lblusuario
@@ -236,7 +214,7 @@
             lblusuario.BackColor = System.Drawing.Color.DarkSlateBlue;
             lblusuario.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             lblusuario.ForeColor = System.Drawing.SystemColors.Control;
-            lblusuario.Location = new System.Drawing.Point(918, 4);
+            lblusuario.Location = new System.Drawing.Point(942, 4);
             lblusuario.Name = "lblusuario";
             lblusuario.Size = new System.Drawing.Size(75, 18);
             lblusuario.TabIndex = 2;
@@ -265,14 +243,14 @@
             MenuTitulo.Controls.Add(Titulotxt);
             MenuTitulo.Location = new System.Drawing.Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
-            MenuTitulo.Size = new System.Drawing.Size(1046, 25);
+            MenuTitulo.Size = new System.Drawing.Size(1141, 25);
             MenuTitulo.TabIndex = 3;
             // 
             // AdminForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1047, 694);
+            ClientSize = new System.Drawing.Size(1143, 705);
             Controls.Add(contenedor);
             Controls.Add(MenuTitulo);
             Controls.Add(menuadmin);
@@ -303,8 +281,6 @@
         private FontAwesome.Sharp.IconMenuItem MenuAcerca;
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.Label nombreuser;
-        private FontAwesome.Sharp.IconMenuItem AsigTecnicas;
-        private FontAwesome.Sharp.IconMenuItem AsigAcademicas;
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label Titulotxt;
         private System.Windows.Forms.Panel MenuTitulo;

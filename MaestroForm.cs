@@ -56,23 +56,20 @@ namespace GestionNotas
 
         private void MenuEstudiante_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new EstudiantesFrm());
+            AbrirFormulario((IconMenuItem)sender, new ACEstudiante());
         }
 
         private void MenuAula_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new AulasFrm());
+            AbrirFormulario((IconMenuItem)sender, new CursoFrm());
         }
 
         private void AsigTecnicas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(MenuAsignatura, new AsignaTecnicaFrm());
+            AbrirFormulario(MenuAsignatura, new AsignarcaliFrm());
         }
 
-        private void AsigAcademicas_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario(MenuAsignatura, new AsignaAcademicaFrm());
-        }
+        
 
         private void MenuReporte_Click(object sender, EventArgs e)
         {
