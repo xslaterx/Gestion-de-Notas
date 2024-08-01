@@ -54,19 +54,6 @@
             label8 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             dgvData = new System.Windows.Forms.DataGridView();
-            btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            UsuarioId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            NombreApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            NumeroEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             txtIndice = new System.Windows.Forms.TextBox();
             txtEstudianteID = new System.Windows.Forms.TextBox();
             txtTutor = new System.Windows.Forms.TextBox();
@@ -80,6 +67,19 @@
             label11 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
             cbocursos = new System.Windows.Forms.ComboBox();
+            btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            EstudianteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TutorNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            NumeroEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -130,7 +130,7 @@
             lblSexo.BackColor = System.Drawing.Color.DarkSlateBlue;
             lblSexo.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             lblSexo.ForeColor = System.Drawing.Color.AliceBlue;
-            lblSexo.Location = new System.Drawing.Point(12, 415);
+            lblSexo.Location = new System.Drawing.Point(12, 409);
             lblSexo.Name = "lblSexo";
             lblSexo.Size = new System.Drawing.Size(48, 23);
             lblSexo.TabIndex = 53;
@@ -376,7 +376,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, UsuarioId, Codigo, Username, Password, Telefono, FechaRegistro, Enfermedad, Medicamento, NombreApellido, Parentesco, NumeroEmergencia, Sexo });
+            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, EstudianteId, Codigo, Nombre, Apellido, Telefono, FechaRegistro, Enfermedad, Medicamento, TutorNombre, Parentesco, NumeroEmergencia, Sexo });
             dgvData.Location = new System.Drawing.Point(741, 108);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
@@ -384,87 +384,6 @@
             dgvData.Size = new System.Drawing.Size(368, 454);
             dgvData.TabIndex = 71;
             dgvData.CellContentClick += dgvData_CellContentClick;
-            // 
-            // btnSeleccionar
-            // 
-            btnSeleccionar.HeaderText = "";
-            btnSeleccionar.Name = "btnSeleccionar";
-            btnSeleccionar.ReadOnly = true;
-            btnSeleccionar.Width = 30;
-            // 
-            // UsuarioId
-            // 
-            UsuarioId.HeaderText = "EstudianteId";
-            UsuarioId.Name = "UsuarioId";
-            UsuarioId.ReadOnly = true;
-            UsuarioId.Visible = false;
-            // 
-            // Codigo
-            // 
-            Codigo.HeaderText = "Codigo";
-            Codigo.Name = "Codigo";
-            Codigo.ReadOnly = true;
-            // 
-            // Username
-            // 
-            Username.HeaderText = "Nombres";
-            Username.Name = "Username";
-            Username.ReadOnly = true;
-            Username.Width = 200;
-            // 
-            // Password
-            // 
-            Password.HeaderText = "Apellidos";
-            Password.Name = "Password";
-            Password.ReadOnly = true;
-            // 
-            // Telefono
-            // 
-            Telefono.HeaderText = "Telefono";
-            Telefono.Name = "Telefono";
-            Telefono.ReadOnly = true;
-            // 
-            // FechaRegistro
-            // 
-            FechaRegistro.HeaderText = "Fecha de Registro";
-            FechaRegistro.Name = "FechaRegistro";
-            FechaRegistro.ReadOnly = true;
-            // 
-            // Enfermedad
-            // 
-            Enfermedad.HeaderText = "Enfermedad";
-            Enfermedad.Name = "Enfermedad";
-            Enfermedad.ReadOnly = true;
-            // 
-            // Medicamento
-            // 
-            Medicamento.HeaderText = "Medicamento";
-            Medicamento.Name = "Medicamento";
-            Medicamento.ReadOnly = true;
-            // 
-            // NombreApellido
-            // 
-            NombreApellido.HeaderText = "Nombre y Apellido";
-            NombreApellido.Name = "NombreApellido";
-            NombreApellido.ReadOnly = true;
-            // 
-            // Parentesco
-            // 
-            Parentesco.HeaderText = "Parentesco";
-            Parentesco.Name = "Parentesco";
-            Parentesco.ReadOnly = true;
-            // 
-            // NumeroEmergencia
-            // 
-            NumeroEmergencia.HeaderText = "Numero de Emergencia";
-            NumeroEmergencia.Name = "NumeroEmergencia";
-            NumeroEmergencia.ReadOnly = true;
-            // 
-            // Sexo
-            // 
-            Sexo.HeaderText = "Sexo";
-            Sexo.Name = "Sexo";
-            Sexo.ReadOnly = true;
             // 
             // txtIndice
             // 
@@ -497,7 +416,7 @@
             // txtSexo
             // 
             txtSexo.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtSexo.Location = new System.Drawing.Point(12, 454);
+            txtSexo.Location = new System.Drawing.Point(12, 441);
             txtSexo.Name = "txtSexo";
             txtSexo.Size = new System.Drawing.Size(48, 24);
             txtSexo.TabIndex = 76;
@@ -593,11 +512,11 @@
             // 
             label12.AutoSize = true;
             label12.BackColor = System.Drawing.Color.DarkSlateBlue;
-            label12.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label12.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label12.ForeColor = System.Drawing.Color.AliceBlue;
-            label12.Location = new System.Drawing.Point(111, 416);
+            label12.Location = new System.Drawing.Point(14, 487);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(122, 23);
+            label12.Size = new System.Drawing.Size(106, 19);
             label12.TabIndex = 84;
             label12.Text = "Asignar Curso";
             // 
@@ -606,11 +525,92 @@
             cbocursos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             cbocursos.Font = new System.Drawing.Font("Sitka Small", 9.75F);
             cbocursos.FormattingEnabled = true;
-            cbocursos.Location = new System.Drawing.Point(111, 451);
+            cbocursos.Location = new System.Drawing.Point(12, 521);
             cbocursos.Name = "cbocursos";
             cbocursos.Size = new System.Drawing.Size(205, 27);
             cbocursos.TabIndex = 85;
             cbocursos.SelectedIndexChanged += cbocursos_SelectedIndexChanged;
+            // 
+            // btnSeleccionar
+            // 
+            btnSeleccionar.HeaderText = "";
+            btnSeleccionar.Name = "btnSeleccionar";
+            btnSeleccionar.ReadOnly = true;
+            btnSeleccionar.Width = 30;
+            // 
+            // EstudianteId
+            // 
+            EstudianteId.HeaderText = "EstudianteId";
+            EstudianteId.Name = "EstudianteId";
+            EstudianteId.ReadOnly = true;
+            EstudianteId.Visible = false;
+            // 
+            // Codigo
+            // 
+            Codigo.HeaderText = "Codigo";
+            Codigo.Name = "Codigo";
+            Codigo.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombres";
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            Nombre.Width = 200;
+            // 
+            // Apellido
+            // 
+            Apellido.HeaderText = "Apellidos";
+            Apellido.Name = "Apellido";
+            Apellido.ReadOnly = true;
+            // 
+            // Telefono
+            // 
+            Telefono.HeaderText = "Telefono";
+            Telefono.Name = "Telefono";
+            Telefono.ReadOnly = true;
+            // 
+            // FechaRegistro
+            // 
+            FechaRegistro.HeaderText = "Fecha de Registro";
+            FechaRegistro.Name = "FechaRegistro";
+            FechaRegistro.ReadOnly = true;
+            // 
+            // Enfermedad
+            // 
+            Enfermedad.HeaderText = "Enfermedad";
+            Enfermedad.Name = "Enfermedad";
+            Enfermedad.ReadOnly = true;
+            // 
+            // Medicamento
+            // 
+            Medicamento.HeaderText = "Medicamento";
+            Medicamento.Name = "Medicamento";
+            Medicamento.ReadOnly = true;
+            // 
+            // TutorNombre
+            // 
+            TutorNombre.HeaderText = "Nombre y Apellido";
+            TutorNombre.Name = "TutorNombre";
+            TutorNombre.ReadOnly = true;
+            // 
+            // Parentesco
+            // 
+            Parentesco.HeaderText = "Parentesco";
+            Parentesco.Name = "Parentesco";
+            Parentesco.ReadOnly = true;
+            // 
+            // NumeroEmergencia
+            // 
+            NumeroEmergencia.HeaderText = "Numero de Emergencia";
+            NumeroEmergencia.Name = "NumeroEmergencia";
+            NumeroEmergencia.ReadOnly = true;
+            // 
+            // Sexo
+            // 
+            Sexo.HeaderText = "Sexo";
+            Sexo.Name = "Sexo";
+            Sexo.ReadOnly = true;
             // 
             // AdminEstudiantesFrm
             // 
@@ -696,19 +696,6 @@
         private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.TextBox txtFechaRegistro;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Enfermedad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Medicamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroEmergencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
         public FontAwesome.Sharp.IconButton btnBuscar;
         public FontAwesome.Sharp.IconButton btnLimpiarBuscador;
         private System.Windows.Forms.TextBox txtBuscar;
@@ -716,5 +703,18 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbocursos;
+        private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstudianteId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Enfermedad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TutorNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroEmergencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
     }
 }

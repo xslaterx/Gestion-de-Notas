@@ -38,11 +38,12 @@
             MenuAsignatura = new FontAwesome.Sharp.IconMenuItem();
             MenuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
             MenuReporte = new FontAwesome.Sharp.IconMenuItem();
-            MenuAcerca = new FontAwesome.Sharp.IconMenuItem();
+            MenuAsistencia = new FontAwesome.Sharp.IconMenuItem();
             contenedor = new System.Windows.Forms.Panel();
             lblusuario = new System.Windows.Forms.Label();
             Titulotxt = new System.Windows.Forms.Label();
             MenuTitulo = new System.Windows.Forms.Panel();
+            iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             menuadmin.SuspendLayout();
             MenuTitulo.SuspendLayout();
             SuspendLayout();
@@ -73,7 +74,7 @@
             menuadmin.BackColor = System.Drawing.Color.Gainsboro;
             menuadmin.Dock = System.Windows.Forms.DockStyle.None;
             menuadmin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            menuadmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { MenuUsuario, MenuDocente, MenuEstudiante, MenuAula, MenuAsignatura, MenuMantenimiento, MenuReporte, MenuAcerca });
+            menuadmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { MenuUsuario, MenuDocente, MenuEstudiante, MenuAsistencia, MenuAula, MenuAsignatura, MenuMantenimiento, MenuReporte, iconMenuItem1 });
             menuadmin.Location = new System.Drawing.Point(0, 28);
             menuadmin.Name = "menuadmin";
             menuadmin.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -186,20 +187,20 @@
             MenuReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             MenuReporte.Click += MenuReporte_Click;
             // 
-            // MenuAcerca
+            // MenuAsistencia
             // 
-            MenuAcerca.AutoSize = false;
-            MenuAcerca.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            MenuAcerca.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            MenuAcerca.IconColor = System.Drawing.Color.Black;
-            MenuAcerca.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuAcerca.IconSize = 26;
-            MenuAcerca.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            MenuAcerca.Name = "MenuAcerca";
-            MenuAcerca.Size = new System.Drawing.Size(122, 62);
-            MenuAcerca.Text = "Acerca de";
-            MenuAcerca.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            MenuAcerca.Click += MenuAcerca_Click;
+            MenuAsistencia.AutoSize = false;
+            MenuAsistencia.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            MenuAsistencia.IconChar = FontAwesome.Sharp.IconChar.Award;
+            MenuAsistencia.IconColor = System.Drawing.Color.Black;
+            MenuAsistencia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            MenuAsistencia.IconSize = 26;
+            MenuAsistencia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            MenuAsistencia.Name = "MenuAsistencia";
+            MenuAsistencia.Size = new System.Drawing.Size(122, 62);
+            MenuAsistencia.Text = "Asistencia";
+            MenuAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            MenuAsistencia.Click += MenuAcerca_Click;
             // 
             // contenedor
             // 
@@ -246,6 +247,20 @@
             MenuTitulo.Size = new System.Drawing.Size(1141, 25);
             MenuTitulo.TabIndex = 3;
             // 
+            // iconMenuItem1
+            // 
+            iconMenuItem1.AutoSize = false;
+            iconMenuItem1.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.Reply;
+            iconMenuItem1.IconColor = System.Drawing.Color.Black;
+            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem1.IconSize = 26;
+            iconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            iconMenuItem1.Name = "iconMenuItem1";
+            iconMenuItem1.Size = new System.Drawing.Size(122, 62);
+            iconMenuItem1.Text = "Acerca de";
+            iconMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
             // AdminForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -278,12 +293,13 @@
         private FontAwesome.Sharp.IconMenuItem MenuMantenimiento;
         private FontAwesome.Sharp.IconMenuItem MenuAsignatura;
         private FontAwesome.Sharp.IconMenuItem MenuReporte;
-        private FontAwesome.Sharp.IconMenuItem MenuAcerca;
+        private FontAwesome.Sharp.IconMenuItem MenuAsistencia;
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.Label nombreuser;
         private System.Windows.Forms.Label lblusuario;
         private System.Windows.Forms.Label Titulotxt;
         private System.Windows.Forms.Panel MenuTitulo;
+        private FontAwesome.Sharp.IconMenuItem iconMenuItem1;
     }
 }
 

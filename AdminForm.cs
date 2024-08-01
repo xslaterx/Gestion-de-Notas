@@ -102,7 +102,7 @@ namespace GestionNotas
 
         private void MenuAcerca_Click(object sender, EventArgs e)
         {
-            AbrirFormulario((IconMenuItem)sender, new AcercaFrm());
+            AbrirFormulario((IconMenuItem)sender, new AsistenciaFrm());
         }
 
         private void lblusuario_Click(object sender, EventArgs e)

@@ -35,6 +35,11 @@ namespace GestionNotas
             cboBuscar.SelectedIndex = 0;
 
 
+            List<Curso> listacurso = new CN_Cursos().Listar();
+            foreach (Curso item in listacurso) { cbocursos.Items.Add(new OpcionCombo() { Valor = item.CursoId, Texto = item.Nombre }); }
+            cbocursos.DisplayMember = "Texto";
+            cbocursos.ValueMember = "Valor";
+           
 
 
 
@@ -63,15 +68,7 @@ namespace GestionNotas
 
             }
 
-
         }
-
-
-
-
-
-
-
         private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvData.Columns[e.ColumnIndex].Name == "btnSeleccionar")

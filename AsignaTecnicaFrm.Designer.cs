@@ -53,6 +53,7 @@
             textBox10 = new System.Windows.Forms.TextBox();
             panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // dataGridView1
@@ -60,26 +61,26 @@
             dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new System.Drawing.Point(515, 12);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new System.Drawing.Size(585, 576);
+            dataGridView1.Size = new System.Drawing.Size(585, 543);
             dataGridView1.TabIndex = 0;
             // 
             // textBox1
             // 
-            textBox1.Location = new System.Drawing.Point(32, 455);
+            textBox1.Location = new System.Drawing.Point(33, 390);
             textBox1.Name = "textBox1";
             textBox1.Size = new System.Drawing.Size(100, 23);
             textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            textBox2.Location = new System.Drawing.Point(33, 257);
+            textBox2.Location = new System.Drawing.Point(33, 239);
             textBox2.Name = "textBox2";
             textBox2.Size = new System.Drawing.Size(100, 23);
             textBox2.TabIndex = 2;
             // 
             // textBox3
             // 
-            textBox3.Location = new System.Drawing.Point(33, 356);
+            textBox3.Location = new System.Drawing.Point(33, 314);
             textBox3.Name = "textBox3";
             textBox3.Size = new System.Drawing.Size(100, 23);
             textBox3.TabIndex = 3;
@@ -98,16 +99,16 @@
             lblusuario.BackColor = System.Drawing.Color.DarkSlateBlue;
             lblusuario.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             lblusuario.ForeColor = System.Drawing.Color.AliceBlue;
-            lblusuario.Location = new System.Drawing.Point(32, 4);
+            lblusuario.Location = new System.Drawing.Point(30, 33);
             lblusuario.Name = "lblusuario";
-            lblusuario.Size = new System.Drawing.Size(172, 19);
+            lblusuario.Size = new System.Drawing.Size(163, 19);
             lblusuario.TabIndex = 5;
-            lblusuario.Text = "CURSO / ASIGNATTURA";
+            lblusuario.Text = "CURSO / ASIGNATURA";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new System.Drawing.Point(32, 40);
+            comboBox1.Location = new System.Drawing.Point(30, 65);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new System.Drawing.Size(207, 23);
             comboBox1.TabIndex = 6;
@@ -131,7 +132,7 @@
             label3.BackColor = System.Drawing.Color.DarkSlateBlue;
             label3.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label3.ForeColor = System.Drawing.Color.AliceBlue;
-            label3.Location = new System.Drawing.Point(30, 406);
+            label3.Location = new System.Drawing.Point(32, 355);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(135, 19);
             label3.TabIndex = 10;
@@ -143,7 +144,7 @@
             label4.BackColor = System.Drawing.Color.DarkSlateBlue;
             label4.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label4.ForeColor = System.Drawing.Color.AliceBlue;
-            label4.Location = new System.Drawing.Point(32, 309);
+            label4.Location = new System.Drawing.Point(32, 282);
             label4.Name = "label4";
             label4.Size = new System.Drawing.Size(133, 19);
             label4.TabIndex = 11;
@@ -155,7 +156,7 @@
             label5.BackColor = System.Drawing.Color.DarkSlateBlue;
             label5.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label5.ForeColor = System.Drawing.Color.AliceBlue;
-            label5.Location = new System.Drawing.Point(32, 207);
+            label5.Location = new System.Drawing.Point(30, 207);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(146, 19);
             label5.TabIndex = 12;
@@ -168,7 +169,7 @@
             label6.BackColor = System.Drawing.Color.DarkSlateBlue;
             label6.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label6.ForeColor = System.Drawing.Color.AliceBlue;
-            label6.Location = new System.Drawing.Point(32, 506);
+            label6.Location = new System.Drawing.Point(33, 433);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(117, 19);
             label6.TabIndex = 13;
@@ -176,7 +177,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new System.Drawing.Point(33, 551);
+            textBox5.Location = new System.Drawing.Point(33, 477);
             textBox5.Name = "textBox5";
             textBox5.Size = new System.Drawing.Size(100, 23);
             textBox5.TabIndex = 14;
@@ -190,21 +191,21 @@
             // 
             // textBox7
             // 
-            textBox7.Location = new System.Drawing.Point(273, 356);
+            textBox7.Location = new System.Drawing.Point(273, 314);
             textBox7.Name = "textBox7";
             textBox7.Size = new System.Drawing.Size(100, 23);
             textBox7.TabIndex = 17;
             // 
             // textBox8
             // 
-            textBox8.Location = new System.Drawing.Point(273, 257);
+            textBox8.Location = new System.Drawing.Point(273, 239);
             textBox8.Name = "textBox8";
             textBox8.Size = new System.Drawing.Size(100, 23);
             textBox8.TabIndex = 16;
             // 
             // textBox9
             // 
-            textBox9.Location = new System.Drawing.Point(273, 455);
+            textBox9.Location = new System.Drawing.Point(273, 390);
             textBox9.Name = "textBox9";
             textBox9.Size = new System.Drawing.Size(100, 23);
             textBox9.TabIndex = 15;
@@ -227,7 +228,7 @@
             label9.BackColor = System.Drawing.Color.DarkSlateBlue;
             label9.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label9.ForeColor = System.Drawing.Color.AliceBlue;
-            label9.Location = new System.Drawing.Point(268, 309);
+            label9.Location = new System.Drawing.Point(273, 282);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(232, 19);
             label9.TabIndex = 21;
@@ -239,7 +240,7 @@
             label10.BackColor = System.Drawing.Color.DarkSlateBlue;
             label10.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label10.ForeColor = System.Drawing.Color.AliceBlue;
-            label10.Location = new System.Drawing.Point(273, 406);
+            label10.Location = new System.Drawing.Point(273, 355);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(201, 19);
             label10.TabIndex = 20;
@@ -263,7 +264,7 @@
             label7.BackColor = System.Drawing.Color.DarkSlateBlue;
             label7.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label7.ForeColor = System.Drawing.Color.AliceBlue;
-            label7.Location = new System.Drawing.Point(273, 506);
+            label7.Location = new System.Drawing.Point(273, 433);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(153, 19);
             label7.TabIndex = 23;
@@ -271,7 +272,7 @@
             // 
             // textBox10
             // 
-            textBox10.Location = new System.Drawing.Point(273, 551);
+            textBox10.Location = new System.Drawing.Point(273, 477);
             textBox10.Name = "textBox10";
             textBox10.Size = new System.Drawing.Size(100, 23);
             textBox10.TabIndex = 24;
@@ -279,10 +280,28 @@
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            panel1.Controls.Add(textBox10);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(lblusuario);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(textBox9);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(textBox7);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(textBox8);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(label4);
             panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             panel1.Location = new System.Drawing.Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(1104, 590);
+            panel1.Size = new System.Drawing.Size(1104, 561);
             panel1.TabIndex = 25;
             // 
             // AsignarcaliFrm
@@ -290,34 +309,18 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             BackColor = System.Drawing.Color.Gainsboro;
-            ClientSize = new System.Drawing.Size(1104, 590);
-            Controls.Add(textBox10);
-            Controls.Add(label7);
+            ClientSize = new System.Drawing.Size(1104, 561);
             Controls.Add(label8);
-            Controls.Add(label9);
-            Controls.Add(label10);
             Controls.Add(label11);
             Controls.Add(textBox6);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
-            Controls.Add(textBox9);
-            Controls.Add(textBox5);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(comboBox1);
-            Controls.Add(lblusuario);
             Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Name = "AsignarcaliFrm";
             Text = "AsignaTecnicaFrm";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
