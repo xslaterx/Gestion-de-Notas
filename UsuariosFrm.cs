@@ -72,11 +72,6 @@ namespace GestionNotas
                     item.RolId,
                     item.Estado == true ? 1 : 0,
                     item.Estado == true ? "Activo" : "Inactivo",
-
-
-
-
-
                 });
 
 

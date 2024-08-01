@@ -38,7 +38,6 @@
             label3 = new System.Windows.Forms.Label();
             cboCurso = new System.Windows.Forms.ComboBox();
             label2 = new System.Windows.Forms.Label();
-            dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             label1 = new System.Windows.Forms.Label();
             txtNombre = new System.Windows.Forms.TextBox();
             txtCodigo = new System.Windows.Forms.TextBox();
@@ -51,6 +50,9 @@
             Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            btnLimpiar = new FontAwesome.Sharp.IconButton();
+            btnEliminar = new FontAwesome.Sharp.IconButton();
+            btnGuardar = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
@@ -58,6 +60,9 @@
             // panel1
             // 
             panel1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            panel1.Controls.Add(btnLimpiar);
+            panel1.Controls.Add(btnEliminar);
+            panel1.Controls.Add(btnGuardar);
             panel1.Controls.Add(cboEstado);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(txtIndice);
@@ -66,7 +71,6 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(cboCurso);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(dateTimePicker1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(txtNombre);
             panel1.Controls.Add(txtCodigo);
@@ -163,15 +167,6 @@
             label2.Size = new System.Drawing.Size(49, 19);
             label2.TabIndex = 12;
             label2.Text = "Curso";
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.CalendarFont = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            dateTimePicker1.Location = new System.Drawing.Point(12, 433);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new System.Drawing.Size(200, 23);
-            dateTimePicker1.TabIndex = 11;
-            dateTimePicker1.Value = new System.DateTime(2024, 7, 30, 23, 22, 0, 0);
             // 
             // label1
             // 
@@ -290,6 +285,67 @@
             Estado.ReadOnly = true;
             Estado.Width = 200;
             // 
+            // btnLimpiar
+            // 
+            btnLimpiar.BackColor = System.Drawing.SystemColors.HotTrack;
+            btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLimpiar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
+            btnLimpiar.ForeColor = System.Drawing.Color.Lavender;
+            btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.File;
+            btnLimpiar.IconColor = System.Drawing.Color.Black;
+            btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiar.IconSize = 18;
+            btnLimpiar.Location = new System.Drawing.Point(20, 491);
+            btnLimpiar.Name = "btnLimpiar";
+            btnLimpiar.Size = new System.Drawing.Size(269, 30);
+            btnLimpiar.TabIndex = 33;
+            btnLimpiar.Text = "Limpiar";
+            btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // btnEliminar
+            // 
+            btnEliminar.BackColor = System.Drawing.Color.Firebrick;
+            btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnEliminar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
+            btnEliminar.ForeColor = System.Drawing.Color.Lavender;
+            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashCan;
+            btnEliminar.IconColor = System.Drawing.Color.Black;
+            btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnEliminar.IconSize = 18;
+            btnEliminar.Location = new System.Drawing.Point(21, 527);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new System.Drawing.Size(268, 30);
+            btnEliminar.TabIndex = 32;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnEliminar.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = System.Drawing.Color.ForestGreen;
+            btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnGuardar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
+            btnGuardar.ForeColor = System.Drawing.Color.Lavender;
+            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.SdCard;
+            btnGuardar.IconColor = System.Drawing.Color.Black;
+            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnGuardar.IconSize = 18;
+            btnGuardar.Location = new System.Drawing.Point(20, 455);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new System.Drawing.Size(268, 30);
+            btnGuardar.TabIndex = 31;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
             // AsistenciaFrm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -321,7 +377,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cboCurso;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboAsignatura;
@@ -330,5 +385,8 @@
         private System.Windows.Forms.TextBox txtAsistenciaID;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.Label label5;
+        public FontAwesome.Sharp.IconButton btnLimpiar;
+        public FontAwesome.Sharp.IconButton btnEliminar;
+        public FontAwesome.Sharp.IconButton btnGuardar;
     }
 }
