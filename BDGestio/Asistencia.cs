@@ -11,10 +11,9 @@ namespace DBGestion
     {
         public int AsistenciaId { get; set; }
         public bool Estado { get; set; }
-        public string Codigo { get; set; }
-        public string Nombre { get; set; }
         public int CursoId { get; set; }
         public int AsignaturaId { get; set; }
+        public int EstudianteId { get; set; }
         public DateTime date { get; set; }
       
        

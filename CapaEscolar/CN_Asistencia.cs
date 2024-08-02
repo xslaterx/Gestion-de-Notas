@@ -21,8 +21,8 @@ namespace CapaEscolar
         public int Registrar(Asistencia obj, out string Mensaje)
         {
             Mensaje = string.Empty;
-            if (obj.Codigo == "") { Mensaje += "Es necesario ingresar el Codigo del Estudiante\n"; }
-            if (obj.Nombre == "") { Mensaje += "Es necesario ingresar el Nombre del Estudiante\n"; }
+            if (obj.Estudiante.Codigo == "") { Mensaje += "Es necesario ingresar el Codigo del Estudiante\n"; }
+            if (obj.Estudiante.Nombre == "") { Mensaje += "Es necesario ingresar el Nombre del Estudiante\n"; }
 
             if (Mensaje != string.Empty) { return 0; }
             else { return odjcd_asistencia.Registrar(obj, out Mensaje); }

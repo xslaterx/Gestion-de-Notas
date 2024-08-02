@@ -15,3 +15,19 @@ C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaDatos\bin\De
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.AssemblyReference.cache
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.Up2Date
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaDatos\obj\Debug\net8.0\CapaDatos.genruntimeconfig.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.AssemblyInfoInputs.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.AssemblyInfo.cs
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.sourcelink.json
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\refint\CapaDatos.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\bin\Debug\net8.0\CapaDatos.deps.json
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\bin\Debug\net8.0\CapaDatos.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\bin\Debug\net8.0\CapaDatos.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\bin\Debug\net8.0\DBGestion.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\bin\Debug\net8.0\DBGestion.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.CopyComplete
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\ref\CapaDatos.dll

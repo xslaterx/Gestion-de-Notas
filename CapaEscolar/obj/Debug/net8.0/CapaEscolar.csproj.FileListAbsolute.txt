@@ -17,3 +17,21 @@ C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaEscolar\obj\
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaEscolar\obj\Debug\net8.0\CapaEscolar.pdb
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaEscolar\obj\Debug\net8.0\CapaEscolar.genruntimeconfig.cache
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\CapaEscolar\obj\Debug\net8.0\ref\CapaEscolar.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\refint\CapaEscolar.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\bin\Debug\net8.0\CapaEscolar.deps.json
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\bin\Debug\net8.0\CapaEscolar.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\bin\Debug\net8.0\CapaEscolar.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\bin\Debug\net8.0\CapaDatos.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\bin\Debug\net8.0\DBGestion.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\bin\Debug\net8.0\DBGestion.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\bin\Debug\net8.0\CapaDatos.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.csproj.AssemblyReference.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.AssemblyInfoInputs.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.AssemblyInfo.cs
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.csproj.CoreCompileInputs.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.sourcelink.json
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.csproj.CopyComplete
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\ref\CapaEscolar.dll

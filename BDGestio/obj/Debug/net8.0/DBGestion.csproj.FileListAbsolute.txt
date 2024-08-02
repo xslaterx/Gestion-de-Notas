@@ -15,3 +15,18 @@ C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\BDGestio\obj\Deb
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\BDGestio\obj\Debug\net8.0\DBGestion.genruntimeconfig.cache
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\BDGestio\obj\Debug\net8.0\ref\DBGestion.dll
 C:\Users\yefri\OneDrive\Escritorio\Sistema de logistica Morayma\BDGestio\obj\Debug\net8.0\DBGestion.Properties.Resources.resources
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\bin\Debug\net8.0\DBGestion.deps.json
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\bin\Debug\net8.0\DBGestion.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\bin\Debug\net8.0\DBGestion.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.csproj.AssemblyReference.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.Properties.Resources.resources
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.csproj.GenerateResource.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.AssemblyInfoInputs.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.AssemblyInfo.cs
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.csproj.CoreCompileInputs.cache
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.sourcelink.json
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\refint\DBGestion.dll
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.pdb
+C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\ref\DBGestion.dll

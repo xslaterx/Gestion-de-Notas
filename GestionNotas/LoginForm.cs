@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BDGestion;
-using System.Data.Entity;
 using CapaEscolar;
+using Microsoft.EntityFrameworkCore;
 
 namespace GestionNotas
 {
@@ -22,10 +22,9 @@ namespace GestionNotas
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
         }
 
-        
+
         private bool VerifyPassword(string enteredPassword, string storedHash)
         {
             // Implement your password verification logic here
@@ -37,8 +36,8 @@ namespace GestionNotas
             List<Usuario> TEST = new CN_Usuario().Listar();
 
 
-            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Username == txtUsername.Text && u.Password == txtPassword.Text).
-                FirstOrDefault();
+            Usuario ousuario = new CN_Usuario()
+                .Listar().FirstOrDefault(u => u.Username == txtUsername.Text && u.Password == txtPassword.Text);
 
             string Username = txtUsername.Text;
             string Password = txtPassword.Text;
@@ -46,12 +45,9 @@ namespace GestionNotas
             using (var context = new AppDbContext())
             {
                 var user = context.Usuarios.Include(u => u.Rol)
-                            .SingleOrDefault(u => u.Username == Username);
-
+                    .SingleOrDefault(u => u.Username == Username);
                 if (user != null && VerifyPassword(Password, user.Password))
                 {
-
-
                     string rol = user.Rol.Descripcion.ToLower().Trim();
 
                     // Se abre un formulario dependiendo el tipo de rol que tiene el usuario
@@ -73,15 +69,12 @@ namespace GestionNotas
                             this.Hide();
                             break;
                     }
-
-
                 }
                 else
                 {
                     MessageBox.Show("Usuario o contraseña incorrectas.");
                 }
             }
-
         }
     }
 }

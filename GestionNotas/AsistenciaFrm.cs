@@ -54,8 +54,8 @@ namespace GestionNotas
 
                 dgvData.Rows.Add(new object[]{"",
                     item.AsistenciaId,
-                    item.Codigo,
-                    item.Nombre,
+                    // item.Codigo,
+                    // item.Nombre,
                     item.Estado == true ? 1 : 0,
                     item.Estado == true ? "Presente" : "Ausente",
                 });
@@ -72,8 +72,8 @@ namespace GestionNotas
             Asistencia objasistencia = new Asistencia()
             {
                 AsistenciaId = Convert.ToInt32(txtAsistenciaID.Text),
-                Codigo = txtCodigo.Text,
-                Nombre = txtNombre.Text,               
+                // Codigo = txtCodigo.Text,
+                // Nombre = txtNombre.Text,               
                 Curso = new Curso() { CursoId = Convert.ToInt32(((OpcionCombo)cboCurso.SelectedItem).Valor) },
                 Asignatura = new Asignatura() { AsignaturaId = Convert.ToInt32(((OpcionCombo)cboAsignatura.SelectedItem).Valor) },
                 Estado = Convert.ToInt32(((OpcionCombo)cboEstado.SelectedItem).Valor) == 1 ? true : false
@@ -87,43 +87,44 @@ namespace GestionNotas
                 if (idasistenciagenerado != 0)
                 {
                     dgvData.Rows.Add(new object[]
-                       { "", idasistenciagenerado,txtCodigo.Text, txtNombre.Text, txtContrasena.Text,
-                       ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(),
-                       ((OpcionCombo)cboRol.SelectedItem).Valor.ToString(),
+                       { "", idasistenciagenerado,txtCodigo.Text, txtNombre.Text, 
+                           // txtContrasena.Text,
+                       // ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(),
+                       // ((OpcionCombo)cboRol.SelectedItem).Valor.ToString(),
                        ((OpcionCombo)cboEstado.SelectedItem).Valor.ToString(),
                        ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString(),
                     });
 
-                    Limpiar();
-                }
+                    // Limpiar();
+                } 
 
 
                 else { MessageBox.Show(Mensaje); }
 
-                Limpiar();
+                // Limpiar();
             }
             else
             {
-                bool resultado = new CN_Asistencia().Editar(idasistenciagenerado, out Mensaje);
-
-                if (resultado)
-                {
-                    DataGridViewRow row = dgvData.Rows[Convert.ToInt32(txtIndice.Text)];
-                    row.Cells["UsuarioId"].Value = txtUsuarioID.Text;
-                    row.Cells["Codigo"].Value = txtCodigo.Text;
-                    row.Cells["Username"].Value = txtNombre.Text;
-                    row.Cells["Password"].Value = txtContrasena.Text;
-                    row.Cells["RolId"].Value = ((OpcionCombo)cboRol.SelectedItem).Valor.ToString();
-                    row.Cells["Rol"].Value = ((OpcionCombo)cboRol.SelectedItem).Texto.ToString();
-                    row.Cells["EstadoValor"].Value = ((OpcionCombo)cboEstado.SelectedItem).Valor.ToString();
-                    row.Cells["Estado"].Value = ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString();
-
-                    Limpiar();
-                }
-                else
-                {
-                    MessageBox.Show(Mensaje);
-                }
+                // bool resultado = new CN_Asistencia().Editar(idasistenciagenerado, out Mensaje);
+                //
+                // if (resultado)
+                // {
+                //     DataGridViewRow row = dgvData.Rows[Convert.ToInt32(txtIndice.Text)];
+                //     row.Cells["UsuarioId"].Value = txtUsuarioID.Text;
+                //     row.Cells["Codigo"].Value = txtCodigo.Text;
+                //     row.Cells["Username"].Value = txtNombre.Text;
+                //     row.Cells["Password"].Value = txtContrasena.Text;
+                //     row.Cells["RolId"].Value = ((OpcionCombo)cboRol.SelectedItem).Valor.ToString();
+                //     row.Cells["Rol"].Value = ((OpcionCombo)cboRol.SelectedItem).Texto.ToString();
+                //     row.Cells["EstadoValor"].Value = ((OpcionCombo)cboEstado.SelectedItem).Valor.ToString();
+                //     row.Cells["Estado"].Value = ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString();
+                //
+                //     Limpiar();
+                // }
+                // else
+                // {
+                //     MessageBox.Show(Mensaje);
+                // }
             }
         
     }
