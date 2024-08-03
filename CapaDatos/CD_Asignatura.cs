@@ -1,28 +1,28 @@
-﻿using BDGestion;
+﻿using System.Data;
+using Dapper;
 using DBGestion;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+using Microsoft.Data.Sqlite;
 
 
 namespace CapaDatos
 {
     public class CD_Asignatura
     {
-        public List<Asignatura> Listar()
+        private readonly IDbConnection _db;
+
+        public CD_Asignatura()
         {
-            List<Asignatura> lista = new List<Asignatura>();
-
-
-            return lista;
-
-
+            _db = new SqliteConnection(Conexion.cadena);
+            _db.Open();
         }
 
-       
+        public List<Asignatura> Listar()
+        {
+            string query =
+                "SELECT * FROM Asignaturas";
+            var asignaturas = _db.Query<Asignatura>(query);
+
+            return asignaturas.ToList();
+        }
     }
 }

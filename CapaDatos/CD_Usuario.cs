@@ -35,7 +35,6 @@ namespace CapaDatos
                 string query =
                     "INSERT INTO Usuarios (UsuarioId,Codigo,Username,Password,Descripcion,Estado,RolId) VALUES (@UsuarioId,@Codigo,@Username,@Password,@Descripcion,@Estado,@RolId)";
                 _db.Execute(query, obj);
-                _db.Close();
             }
             catch (Exception e)
             {
@@ -43,6 +42,7 @@ namespace CapaDatos
             }
 
 
+            _db.Close();
             return usuariosGenerados;
         }
 
@@ -56,7 +56,6 @@ namespace CapaDatos
                 string query =
                     "UPDATE Usuarios SET Codigo = @Codigo, Username = @Username, Password = @Password, Descripcion = @Descripcion, Estado = @Estado, RolId = @RolId WHERE UsuarioId = @UsuarioId";
                 _db.Execute(query, obj);
-                _db.Close();
                 respuesta = true;
             }
             catch (Exception e)
@@ -66,6 +65,7 @@ namespace CapaDatos
             }
 
 
+            _db.Close();
             return respuesta;
         }
 
@@ -78,7 +78,6 @@ namespace CapaDatos
             {
                 string query = "DELETE FROM Usuarios WHERE UsuarioId = @UsuarioId";
                 _db.Execute(query, obj);
-                _db.Close();
                 respuesta = true;
             }
             catch (Exception e)
@@ -88,6 +87,7 @@ namespace CapaDatos
             }
 
 
+            _db.Close();
             return respuesta;
         }
     }

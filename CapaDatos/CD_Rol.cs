@@ -1,25 +1,29 @@
-﻿using BDGestion;
-using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-
+﻿using System.Data;
+using BDGestion;
+using Dapper;
+using DBGestion;
+using Microsoft.Data.Sqlite;
 
 
 namespace CapaDatos
 {
     public class CD_Rol
     {
-        public List<Rol> Listar()
-        {
-            List<Rol> lista = new List<Rol>();
+        private readonly IDbConnection _db;
 
-            return lista;
+        public CD_Rol()
+        {
+            _db = new SqliteConnection(Conexion.cadena);
+            _db.Open();
         }
 
-
+        public List<Rol> Listar()
+        {
+            string query =
+                "SELECT * FROM Roles";
+            var roles = _db.Query<Rol>(query);
+            _db.Close();
+            return roles.ToList();
+        }
     }
 }
