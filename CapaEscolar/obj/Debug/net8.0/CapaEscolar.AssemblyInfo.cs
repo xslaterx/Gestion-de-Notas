@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CapaEscolar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a91bdf28efad90b72d5919867302d4d0aa48cbac")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+786c76c963c19327f208fc922eb73fef8536c967")]
 [assembly: System.Reflection.AssemblyProductAttribute("CapaEscolar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CapaEscolar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
