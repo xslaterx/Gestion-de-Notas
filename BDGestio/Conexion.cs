@@ -2,5 +2,5 @@
 
 public class Conexion
 {
-    public static string cadena => "Data source=AppDbContext.db";
+    public static string cadena => "Data Source=../../../AppDbContext.db";
 }
