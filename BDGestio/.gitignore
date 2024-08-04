@@ -805,3 +805,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 
+/obj/
