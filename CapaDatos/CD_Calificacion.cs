@@ -6,11 +6,11 @@ using Microsoft.Data.Sqlite;
 
 namespace CapaDatos;
 
-public class CD_Califiacion
+public class CD_Calificacion
 {
     private readonly IDbConnection _db;
 
-    public CD_Califiacion()
+    public CD_Calificacion()
     {
         _db = new SqliteConnection(Conexion.cadena);
         _db.Open();
@@ -74,5 +74,24 @@ public class CD_Califiacion
         _db.Close();
         return respuesta;
         
+    }
+
+    public bool Eliminar(Calificacion on, out string mensaje)
+    {
+        
+        bool respuesta = false;
+        mensaje = string.Empty;
+        try
+        {
+            string query = "DELETE FROM Calificaciones WHERE CalificacionId = @CalificacionId";
+            respuesta = _db.Execute(query, on) > 0;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            mensaje = e.ToString();
+        }
+        _db.Close();
+        return respuesta;
     }
 }
