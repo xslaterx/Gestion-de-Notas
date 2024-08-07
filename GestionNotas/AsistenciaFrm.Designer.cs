@@ -306,7 +306,7 @@
             dgvData.ReadOnly = true;
             dgvData.Size = new System.Drawing.Size(840, 598);
             dgvData.TabIndex = 19;
-            dgvData.CellContentClick += dgvData_CellContentClick;
+
             // 
             // btnSeleccionar
             // 
