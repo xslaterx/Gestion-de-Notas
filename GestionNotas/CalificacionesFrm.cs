@@ -142,25 +142,50 @@ namespace GestionNotas
         private void btningresar_Click(object sender, EventArgs e)
         {
             string Mensaje = string.Empty;
-
-            Calificacion objcalificacion = new Calificacion()
+            var calificacionId = Convert.ToInt32(txtCalificacionId.Text);
+                var primerP = Convert.ToInt32(txtPrimerP.Text);
+            var segundoP = Convert.ToInt32(txtSegundoP.Text);
+            var tercerP = Convert.ToInt32(txtTercerP.Text);
+            var cuartoP = Convert.ToInt32(txtCuartoP.Text);
+            var promedio = Convert.ToDouble(txtPromedio.Text);
+            var examenF = Convert.ToInt32(txtExamenF.Text);
+            var puntuacionF = Convert.ToDouble(txtPuntuacionF.Text ?? "0");
+            int acumuladoC = 0;
+            if(txtAcumuladoC.Text != "N/A")
             {
-                CalificacionId = Convert.ToInt32(txtCalificacionId.Text),
-                PrimerP = Convert.ToInt32(txtPrimerP.Text),
-                SegundoP = Convert.ToInt32(txtSegundoP.Text),
-                TercerP = Convert.ToInt32(txtTercerP.Text),
-                CuartoP = Convert.ToInt32(txtCuartoP.Text),
-                Promedio = Convert.ToInt32(txtPromedio.Text),
-                ExamenF = Convert.ToInt32(txtExamenF.Text),
-                PuntuacionF = Convert.ToInt32(txtPuntuacionF.Text),
-                AcumuladoC = Convert.ToInt32(txtAcumuladoC.Text),
-                ExamenC = Convert.ToInt32(txtExamenC.Text),
-                CompletivoF = Convert.ToInt32(txtFinalC.Text),
-                AcumuladoEX = Convert.ToInt32(txtAcumuladoE.Text),
-                ExamenEx = Convert.ToInt32(txtExamenE.Text),
-                FinalEx = Convert.ToInt32(txtPuntuacionFF.Text),
+                 acumuladoC = Convert.ToInt32(txtAcumuladoC.Text ?? "");
+            }
+            int examenC = 0;
+            if (txtExamenC.Text != "N/A")
+            {
+                examenC = Convert.ToInt32(txtExamenC.Text);
+            }
+            int completivoF = 0;
+            if(txtFinalC.Text != "N/A")
+            {
+                completivoF = Convert.ToInt32(txtFinalC.Text);
+            }
 
-            };
+    
+
+            int acumuladoEX = 0;
+            if (txtAcumuladoE.Text != "N/A")
+            {
+                acumuladoEX = Convert.ToInt32(txtAcumuladoE.Text ?? "");}
+            
+            int examenEx = 0;
+            if (txtExamenE.Text != "N/A")
+            {
+                examenEx = Convert.ToInt32(txtExamenE.Text ?? "");
+            }
+          
+            int finalEx = 0;
+            if (txtPuntuacionFF.Text != "N/A")
+            {
+                finalEx = Convert.ToInt32(txtPuntuacionFF.Text);
+            }
+
+            Calificacion objcalificacion = new Calificacion(calificacionId,1,1,0,primerP,puntuacionF,promedio,segundoP,tercerP,cuartoP,examenF,acumuladoC,examenC,acumuladoEX,examenEx,completivoF,finalEx);
 
             if (objcalificacion.CalificacionId == 0)
             {
@@ -272,6 +297,16 @@ namespace GestionNotas
 
                 }
             }
+
+        }
+
+        private void AsignarcaliFrm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

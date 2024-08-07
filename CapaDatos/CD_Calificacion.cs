@@ -41,8 +41,8 @@ public class CD_Calificacion
         try
         {
             string query =
-                "INSERT INTO Calificaciones(CalificacionId,EstudianteId,CursoId,Nota,PrimerP,SegundoP,TercerP,CuartoP,ExamenF,AcumuladoC,AcumuladoEX,ExamenEx,PuntuacionF) "
-            + "VALUES (@CalificacionId,@EstudianteId,@CursoId,@Nota,@PrimerP,@SegundoP,@TercerP,@CuartoP,@ExamenF,@AcumuladoC,@AcumuladoEX,@ExamenEx,@PuntuacionF)";
+                "INSERT INTO Calificaciones(CalificacionId,EstudianteId,CursoId,PrimerP,SegundoP,TercerP,CuartoP,ExamenF,AcumuladoC,ExamenC,AcumuladoEX,ExamenEx,PuntuacionF,Promedio,CompletivoF,FinalEx) "
+            + "VALUES (@CalificacionId,@EstudianteId,@CursoId,@PrimerP,@SegundoP,@TercerP,@CuartoP,@ExamenF,@AcumuladoC,@ExamenC,@AcumuladoEX,@ExamenEx,@PuntuacionF,@Promedio,@CompletivoF,@FinalEx)";
             calificacionesGeneradas = _db.Execute(query,obj);
         }
         catch (Exception e)

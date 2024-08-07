@@ -103,28 +103,28 @@
             txtCuartoP.Location = new System.Drawing.Point(30, 331);
             txtCuartoP.Name = "txtCuartoP";
             txtCuartoP.Size = new System.Drawing.Size(94, 23);
-            txtCuartoP.TabIndex = 1;
+            txtCuartoP.TabIndex = 5;
             // 
             // txtSegundoP
             // 
             txtSegundoP.Location = new System.Drawing.Point(30, 180);
             txtSegundoP.Name = "txtSegundoP";
             txtSegundoP.Size = new System.Drawing.Size(94, 23);
-            txtSegundoP.TabIndex = 2;
+            txtSegundoP.TabIndex = 3;
             // 
             // txtTercerP
             // 
             txtTercerP.Location = new System.Drawing.Point(30, 255);
             txtTercerP.Name = "txtTercerP";
             txtTercerP.Size = new System.Drawing.Size(94, 23);
-            txtTercerP.TabIndex = 3;
+            txtTercerP.TabIndex = 4;
             // 
             // txtPrimerP
             // 
             txtPrimerP.Location = new System.Drawing.Point(33, 98);
             txtPrimerP.Name = "txtPrimerP";
             txtPrimerP.Size = new System.Drawing.Size(94, 23);
-            txtPrimerP.TabIndex = 4;
+            txtPrimerP.TabIndex = 2;
             txtPrimerP.TextChanged += textBox4_TextChanged;
             // 
             // lblusuario
@@ -145,7 +145,7 @@
             comboBox1.Location = new System.Drawing.Point(268, 11);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new System.Drawing.Size(207, 23);
-            comboBox1.TabIndex = 6;
+            comboBox1.TabIndex = 1;
             comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label2
@@ -203,28 +203,28 @@
             txtAcumuladoC.Location = new System.Drawing.Point(235, 98);
             txtAcumuladoC.Name = "txtAcumuladoC";
             txtAcumuladoC.Size = new System.Drawing.Size(100, 23);
-            txtAcumuladoC.TabIndex = 18;
+            txtAcumuladoC.TabIndex = 9;
             // 
             // txtAcumuladoE
             // 
             txtAcumuladoE.Location = new System.Drawing.Point(235, 333);
             txtAcumuladoE.Name = "txtAcumuladoE";
             txtAcumuladoE.Size = new System.Drawing.Size(100, 23);
-            txtAcumuladoE.TabIndex = 17;
+            txtAcumuladoE.TabIndex = 12;
             // 
             // txtExamenC
             // 
             txtExamenC.Location = new System.Drawing.Point(235, 180);
             txtExamenC.Name = "txtExamenC";
             txtExamenC.Size = new System.Drawing.Size(100, 23);
-            txtExamenC.TabIndex = 16;
+            txtExamenC.TabIndex = 10;
             // 
             // txtExamenE
             // 
             txtExamenE.Location = new System.Drawing.Point(235, 409);
             txtExamenE.Name = "txtExamenE";
             txtExamenE.Size = new System.Drawing.Size(100, 23);
-            txtExamenE.TabIndex = 15;
+            txtExamenE.TabIndex = 13;
             // 
             // label8
             // 
@@ -279,7 +279,7 @@
             txtPuntuacionFF.Location = new System.Drawing.Point(235, 496);
             txtPuntuacionFF.Name = "txtPuntuacionFF";
             txtPuntuacionFF.Size = new System.Drawing.Size(100, 23);
-            txtPuntuacionFF.TabIndex = 24;
+            txtPuntuacionFF.TabIndex = 14;
             // 
             // panel1
             // 
@@ -322,6 +322,7 @@
             panel1.Name = "panel1";
             panel1.Size = new System.Drawing.Size(1104, 618);
             panel1.TabIndex = 25;
+            panel1.Paint += panel1_Paint;
             // 
             // txtIndice
             // 
@@ -349,7 +350,7 @@
             btncalcular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             btncalcular.Name = "btncalcular";
             btncalcular.Size = new System.Drawing.Size(201, 30);
-            btncalcular.TabIndex = 38;
+            btncalcular.TabIndex = 16;
             btncalcular.Text = "Calcular";
             btncalcular.UseVisualStyleBackColor = true;
             btncalcular.Click += btncalcular_Click;
@@ -360,7 +361,7 @@
             btningresar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             btningresar.Name = "btningresar";
             btningresar.Size = new System.Drawing.Size(201, 30);
-            btningresar.TabIndex = 37;
+            btningresar.TabIndex = 15;
             btningresar.Text = "Ingresar";
             btningresar.UseVisualStyleBackColor = true;
             btningresar.Click += btningresar_Click;
@@ -371,7 +372,7 @@
             txtFinalC.Location = new System.Drawing.Point(235, 255);
             txtFinalC.Name = "txtFinalC";
             txtFinalC.Size = new System.Drawing.Size(100, 23);
-            txtFinalC.TabIndex = 36;
+            txtFinalC.TabIndex = 11;
             // 
             // label6
             // 
@@ -391,7 +392,7 @@
             txtPromedio.Location = new System.Drawing.Point(33, 409);
             txtPromedio.Name = "txtPromedio";
             txtPromedio.Size = new System.Drawing.Size(91, 23);
-            txtPromedio.TabIndex = 34;
+            txtPromedio.TabIndex = 6;
             // 
             // label1
             // 
@@ -411,7 +412,7 @@
             txtPuntuacionF.Location = new System.Drawing.Point(33, 568);
             txtPuntuacionF.Name = "txtPuntuacionF";
             txtPuntuacionF.Size = new System.Drawing.Size(94, 23);
-            txtPuntuacionF.TabIndex = 32;
+            txtPuntuacionF.TabIndex = 8;
             // 
             // label12
             // 
@@ -430,7 +431,7 @@
             txtExamenF.Location = new System.Drawing.Point(33, 492);
             txtExamenF.Name = "txtExamenF";
             txtExamenF.Size = new System.Drawing.Size(94, 23);
-            txtExamenF.TabIndex = 30;
+            txtExamenF.TabIndex = 7;
             // 
             // label13
             // 
@@ -452,7 +453,7 @@
             dgvData.Name = "dgvData";
             dgvData.RowHeadersWidth = 51;
             dgvData.Size = new System.Drawing.Size(592, 580);
-            dgvData.TabIndex = 26;
+            dgvData.TabIndex = 17;
             dgvData.CellContentClick += dgvData_CellContentClick;
             // 
             // btnSeleccionar
@@ -595,6 +596,7 @@
             Controls.Add(panel1);
             Name = "AsignarcaliFrm";
             Text = "Calificaciones";
+            Load += AsignarcaliFrm_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvData).EndInit();

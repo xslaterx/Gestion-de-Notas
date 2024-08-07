@@ -13,7 +13,6 @@ namespace BDGestion
         public int CalificacionId { get; set; }
         public int EstudianteId { get; set; }
         public int CursoId { get; set; }
-        public decimal Nota { get; set; }
         public int PrimerP {  get; set; }   
         public int SegundoP{ get; set; }
         public int TercerP { get; set; }
@@ -23,17 +22,42 @@ namespace BDGestion
         public int ExamenC { get; set; }
         public int AcumuladoEX { get; set; }
         public int ExamenEx { get; set; }
-        public int PuntuacionF { get; set; }
-        public int Promedio { get; set; }
+        public double PuntuacionF { get; set; }
+        public double Promedio { get; set; }
         public int CompletivoF { get; set; }
         public int FinalEx {  get; set; }
 
         public virtual Estudiante Estudiante { get; set; }
         public virtual Curso Curso { get; set; }
 
+        public Calificacion()
+        {
+            
+        }
+
+        public Calificacion(int calificacionId , int estudianteId, int cursoId, decimal nota, int primerP, double puntuacionF, double promedio, int segundoP =0, int tercerP=0, int cuartoP=0, int examenF=0, int acumuladoC=0, int examenC=0, int acumuladoEX=0, int examenEx=0, int completivoF=0, int finalEx=0)
+        {
+            CalificacionId = calificacionId;
+            EstudianteId = estudianteId;
+            CursoId = cursoId;
+            Nota = nota;
+            PrimerP = primerP;
+            SegundoP = segundoP;
+            TercerP = tercerP;
+            CuartoP = cuartoP;
+            ExamenF = examenF;
+            AcumuladoC = acumuladoC;
+            ExamenC = examenC;
+            AcumuladoEX = acumuladoEX;
+            ExamenEx = examenEx;
+            PuntuacionF = puntuacionF;
+            Promedio = promedio;
+            CompletivoF = completivoF;
+            FinalEx = finalEx;
+        }
 
         // Calcular el promedio de los primeros 4 periodos
-        public int CalcularPromedioPeriodos()
+        public double CalcularPromedioPeriodos()
         {
             return (PrimerP + SegundoP + TercerP + CuartoP) / 4;
         }
