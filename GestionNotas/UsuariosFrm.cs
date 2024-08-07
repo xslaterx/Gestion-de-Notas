@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using BDGestion;
 using CapaDatos;
 using CapaEscolar;
-using GestionNotas.Properties;
+//using GestionNotas.Properties;
 using GestionNotas.Utlidades;
 
 
@@ -36,7 +36,7 @@ namespace GestionNotas
             cboEstado.SelectedIndex = 0;
 
 
-            List<Rol> listaRol = new CN_Rol().Listar();
+            List<Rol> listaRol = new CD_Rol().Listar();
             foreach (Rol item in listaRol) { cboRol.Items.Add(new OpcionCombo() { Valor = item.RolId, Texto = item.Descripcion }); }
             cboRol.DisplayMember = "Texto";
             cboRol.ValueMember = "Valor";
@@ -58,7 +58,7 @@ namespace GestionNotas
 
 
             //MOSTRAR TODOS LOS USUARIOS
-            List<Usuario> listaUsuario = new CN_Usuario().Listar();
+            List<Usuario> listaUsuario = new CD_Usuario().Listar();
 
             foreach (Usuario item in listaUsuario)
             {
@@ -95,7 +95,7 @@ namespace GestionNotas
             if (objusuario.UsuarioId == 0)
             {
 
-                int idusuariogenerado = new CN_Usuario().Registrar(objusuario, out Mensaje);
+                int idusuariogenerado = new CD_Usuario().Registrar(objusuario, out Mensaje);
 
                 if (idusuariogenerado != 0)
                 {
@@ -117,7 +117,7 @@ namespace GestionNotas
             }
             else
             {
-                bool resultado = new CN_Usuario().Editar(objusuario, out Mensaje);
+                bool resultado = new CD_Usuario().Editar(objusuario, out Mensaje);
 
                 if (resultado)
                 {
@@ -219,7 +219,7 @@ namespace GestionNotas
         //ESTE METODO ES PARA COLOCAR LA IMAGEN DE CHECK EN EL DATAGRIDVIEW
         private void dgvData_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if (e.RowIndex < 0)
+          /*  if (e.RowIndex < 0)
                 return;
 
             if (e.ColumnIndex == 0)
@@ -234,7 +234,7 @@ namespace GestionNotas
 
                 e.Graphics.DrawImage(Properties.Resources.checkmark, new Rectangle(x, y, w, h));
                 e.Handled = true;
-            }
+            }*/
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -250,7 +250,7 @@ namespace GestionNotas
                         UsuarioId = Convert.ToInt32(txtUsuarioID.Text)
                     };
 
-                    bool respuesta = new CN_Usuario().Eliminar(objusuario, out mensaje);
+                    bool respuesta = new CD_Usuario().Eliminar(objusuario, out mensaje);
 
                     if (respuesta)
                     {

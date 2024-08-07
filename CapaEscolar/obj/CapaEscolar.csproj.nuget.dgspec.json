@@ -1,25 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaEscolar\\CapaEscolar.csproj": {}
+    "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaEscolar\\CapaEscolar.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj": {
+    "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj",
+        "projectUniqueName": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj",
         "projectName": "DBGestion",
-        "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj",
-        "packagesPath": "C:\\Users\\Sheymor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\obj\\",
+        "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj",
+        "packagesPath": "C:\\Users\\yefri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sheymor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yefri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -32,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -63,34 +71,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\CapaDatos.csproj": {
+    "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\CapaDatos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\CapaDatos.csproj",
+        "projectUniqueName": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\CapaDatos.csproj",
         "projectName": "CapaDatos",
-        "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\CapaDatos.csproj",
-        "packagesPath": "C:\\Users\\Sheymor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\obj\\",
+        "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\CapaDatos.csproj",
+        "packagesPath": "C:\\Users\\yefri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sheymor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yefri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj": {
-                "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj"
+              "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj": {
+                "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj"
               }
             }
           }
@@ -99,6 +110,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -126,37 +142,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaEscolar\\CapaEscolar.csproj": {
+    "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaEscolar\\CapaEscolar.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaEscolar\\CapaEscolar.csproj",
+        "projectUniqueName": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaEscolar\\CapaEscolar.csproj",
         "projectName": "CapaEscolar",
-        "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaEscolar\\CapaEscolar.csproj",
-        "packagesPath": "C:\\Users\\Sheymor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaEscolar\\obj\\",
+        "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaEscolar\\CapaEscolar.csproj",
+        "packagesPath": "C:\\Users\\yefri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaEscolar\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sheymor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\yefri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj": {
-                "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj"
+              "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj": {
+                "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj"
               },
-              "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\CapaDatos.csproj": {
-                "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\CapaDatos.csproj"
+              "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\CapaDatos.csproj": {
+                "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\CapaDatos.csproj"
               }
             }
           }
@@ -165,6 +184,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -186,7 +210,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

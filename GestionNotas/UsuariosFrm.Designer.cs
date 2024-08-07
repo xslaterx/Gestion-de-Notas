@@ -368,7 +368,7 @@
             txtUsuarioID.Name = "txtUsuarioID";
             txtUsuarioID.Size = new System.Drawing.Size(29, 24);
             txtUsuarioID.TabIndex = 20;
-            txtUsuarioID.Text = "0";
+            txtUsuarioID.Text = "3";
             txtUsuarioID.Visible = false;
             // 
             // label6

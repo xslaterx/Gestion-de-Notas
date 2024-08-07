@@ -16,7 +16,7 @@ namespace BDGestion
         public string Codigo   { get; set; }   
         public string Username { get; set; } 
         public string Password { get; set; }   
-        public string Descripcion { get; set; }
+        public string Descripcion { get; set; } 
         public bool Estado { get; set; }
         public int RolId { get; set; }
         public virtual Rol Rol { get; set; }

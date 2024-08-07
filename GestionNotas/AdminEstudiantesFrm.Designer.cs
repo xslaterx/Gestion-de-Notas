@@ -33,7 +33,6 @@
             label3 = new System.Windows.Forms.Label();
             txtApellido = new System.Windows.Forms.TextBox();
             label2 = new System.Windows.Forms.Label();
-            lblSexo = new System.Windows.Forms.Label();
             btnLimpiar = new FontAwesome.Sharp.IconButton();
             btnEliminar = new FontAwesome.Sharp.IconButton();
             btnGuardar = new FontAwesome.Sharp.IconButton();
@@ -43,7 +42,6 @@
             lblNombre = new System.Windows.Forms.Label();
             lblTelefono = new System.Windows.Forms.Label();
             lblEstudiante = new System.Windows.Forms.Label();
-            label4 = new System.Windows.Forms.Label();
             txtEnfermedad = new System.Windows.Forms.TextBox();
             label5 = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
@@ -54,6 +52,21 @@
             label8 = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
             dgvData = new System.Windows.Forms.DataGridView();
+            btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            EstudianteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            TutorNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            NumeroEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             txtIndice = new System.Windows.Forms.TextBox();
             txtEstudianteID = new System.Windows.Forms.TextBox();
             txtTutor = new System.Windows.Forms.TextBox();
@@ -67,19 +80,10 @@
             label11 = new System.Windows.Forms.Label();
             label12 = new System.Windows.Forms.Label();
             cbocursos = new System.Windows.Forms.ComboBox();
-            btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            EstudianteId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            FechaRegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Enfermedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            TutorNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            NumeroEmergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            Sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            cboEstado = new System.Windows.Forms.ComboBox();
+            label13 = new System.Windows.Forms.Label();
+            label14 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)dgvData).BeginInit();
             SuspendLayout();
             // 
@@ -89,7 +93,7 @@
             label1.Dock = System.Windows.Forms.DockStyle.Top;
             label1.Location = new System.Drawing.Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(1108, 588);
+            label1.Size = new System.Drawing.Size(1138, 614);
             label1.TabIndex = 1;
             // 
             // label3
@@ -98,7 +102,7 @@
             label3.BackColor = System.Drawing.Color.DarkSlateBlue;
             label3.Font = new System.Drawing.Font("Sitka Small", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             label3.ForeColor = System.Drawing.Color.AliceBlue;
-            label3.Location = new System.Drawing.Point(194, 5);
+            label3.Location = new System.Drawing.Point(0, 9);
             label3.Name = "label3";
             label3.Size = new System.Drawing.Size(347, 31);
             label3.TabIndex = 34;
@@ -107,9 +111,9 @@
             // txtApellido
             // 
             txtApellido.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtApellido.Location = new System.Drawing.Point(12, 229);
+            txtApellido.Location = new System.Drawing.Point(264, 486);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new System.Drawing.Size(218, 24);
+            txtApellido.Size = new System.Drawing.Size(174, 24);
             txtApellido.TabIndex = 57;
             // 
             // label2
@@ -118,23 +122,11 @@
             label2.BackColor = System.Drawing.Color.DarkSlateBlue;
             label2.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             label2.ForeColor = System.Drawing.Color.AliceBlue;
-            label2.Location = new System.Drawing.Point(12, 193);
+            label2.Location = new System.Drawing.Point(264, 462);
             label2.Name = "label2";
             label2.Size = new System.Drawing.Size(79, 19);
             label2.TabIndex = 56;
             label2.Text = "Apellidos:";
-            // 
-            // lblSexo
-            // 
-            lblSexo.AutoSize = true;
-            lblSexo.BackColor = System.Drawing.Color.DarkSlateBlue;
-            lblSexo.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            lblSexo.ForeColor = System.Drawing.Color.AliceBlue;
-            lblSexo.Location = new System.Drawing.Point(12, 409);
-            lblSexo.Name = "lblSexo";
-            lblSexo.Size = new System.Drawing.Size(48, 23);
-            lblSexo.TabIndex = 53;
-            lblSexo.Text = "Sexo";
             // 
             // btnLimpiar
             // 
@@ -147,14 +139,15 @@
             btnLimpiar.IconColor = System.Drawing.Color.Black;
             btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnLimpiar.IconSize = 20;
-            btnLimpiar.Location = new System.Drawing.Point(376, 452);
+            btnLimpiar.Location = new System.Drawing.Point(906, 367);
             btnLimpiar.Name = "btnLimpiar";
-            btnLimpiar.Size = new System.Drawing.Size(262, 30);
+            btnLimpiar.Size = new System.Drawing.Size(97, 30);
             btnLimpiar.TabIndex = 52;
             btnLimpiar.Text = "Limpiar";
             btnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnLimpiar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnLimpiar.UseVisualStyleBackColor = false;
+            btnLimpiar.Click += btnLimpiar_Click;
             // 
             // btnEliminar
             // 
@@ -167,14 +160,15 @@
             btnEliminar.IconColor = System.Drawing.Color.Black;
             btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnEliminar.IconSize = 20;
-            btnEliminar.Location = new System.Drawing.Point(376, 494);
+            btnEliminar.Location = new System.Drawing.Point(1005, 367);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new System.Drawing.Size(262, 30);
+            btnEliminar.Size = new System.Drawing.Size(97, 30);
             btnEliminar.TabIndex = 51;
             btnEliminar.Text = "Eliminar";
             btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnGuardar
             // 
@@ -187,9 +181,9 @@
             btnGuardar.IconColor = System.Drawing.Color.Black;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnGuardar.IconSize = 20;
-            btnGuardar.Location = new System.Drawing.Point(376, 409);
+            btnGuardar.Location = new System.Drawing.Point(809, 367);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new System.Drawing.Size(262, 30);
+            btnGuardar.Size = new System.Drawing.Size(95, 30);
             btnGuardar.TabIndex = 50;
             btnGuardar.Text = "Guardar";
             btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -200,25 +194,25 @@
             // txtTelefono
             // 
             txtTelefono.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtTelefono.Location = new System.Drawing.Point(12, 298);
+            txtTelefono.Location = new System.Drawing.Point(264, 430);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new System.Drawing.Size(218, 24);
+            txtTelefono.Size = new System.Drawing.Size(174, 24);
             txtTelefono.TabIndex = 47;
             // 
             // txtNombre
             // 
             txtNombre.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtNombre.Location = new System.Drawing.Point(12, 156);
+            txtNombre.Location = new System.Drawing.Point(12, 486);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new System.Drawing.Size(218, 24);
+            txtNombre.Size = new System.Drawing.Size(204, 24);
             txtNombre.TabIndex = 46;
             // 
             // txtCodigo
             // 
             txtCodigo.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtCodigo.Location = new System.Drawing.Point(12, 81);
+            txtCodigo.Location = new System.Drawing.Point(12, 428);
             txtCodigo.Name = "txtCodigo";
-            txtCodigo.Size = new System.Drawing.Size(218, 24);
+            txtCodigo.Size = new System.Drawing.Size(203, 24);
             txtCodigo.TabIndex = 45;
             // 
             // lblNombre
@@ -227,7 +221,7 @@
             lblNombre.BackColor = System.Drawing.Color.DarkSlateBlue;
             lblNombre.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             lblNombre.ForeColor = System.Drawing.Color.AliceBlue;
-            lblNombre.Location = new System.Drawing.Point(12, 120);
+            lblNombre.Location = new System.Drawing.Point(12, 462);
             lblNombre.Name = "lblNombre";
             lblNombre.Size = new System.Drawing.Size(76, 19);
             lblNombre.TabIndex = 44;
@@ -239,7 +233,7 @@
             lblTelefono.BackColor = System.Drawing.Color.DarkSlateBlue;
             lblTelefono.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             lblTelefono.ForeColor = System.Drawing.Color.AliceBlue;
-            lblTelefono.Location = new System.Drawing.Point(12, 265);
+            lblTelefono.Location = new System.Drawing.Point(264, 402);
             lblTelefono.Name = "lblTelefono";
             lblTelefono.Size = new System.Drawing.Size(69, 19);
             lblTelefono.TabIndex = 43;
@@ -251,31 +245,19 @@
             lblEstudiante.BackColor = System.Drawing.Color.DarkSlateBlue;
             lblEstudiante.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
             lblEstudiante.ForeColor = System.Drawing.Color.AliceBlue;
-            lblEstudiante.Location = new System.Drawing.Point(12, 48);
+            lblEstudiante.Location = new System.Drawing.Point(12, 402);
             lblEstudiante.Name = "lblEstudiante";
             lblEstudiante.Size = new System.Drawing.Size(167, 19);
             lblEstudiante.TabIndex = 42;
             lblEstudiante.Text = "Codigo del Estudiante:";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            label4.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label4.ForeColor = System.Drawing.Color.AliceBlue;
-            label4.Location = new System.Drawing.Point(361, 49);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(221, 24);
-            label4.TabIndex = 58;
-            label4.Text = "DATOS DE EMERGENCIA\r\n";
-            // 
             // txtEnfermedad
             // 
             txtEnfermedad.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtEnfermedad.Location = new System.Drawing.Point(275, 136);
+            txtEnfermedad.Location = new System.Drawing.Point(657, 473);
             txtEnfermedad.Multiline = true;
             txtEnfermedad.Name = "txtEnfermedad";
-            txtEnfermedad.Size = new System.Drawing.Size(218, 44);
+            txtEnfermedad.Size = new System.Drawing.Size(218, 37);
             txtEnfermedad.TabIndex = 59;
             // 
             // label5
@@ -284,7 +266,7 @@
             label5.BackColor = System.Drawing.Color.DarkSlateBlue;
             label5.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             label5.ForeColor = System.Drawing.Color.AliceBlue;
-            label5.Location = new System.Drawing.Point(283, 110);
+            label5.Location = new System.Drawing.Point(657, 451);
             label5.Name = "label5";
             label5.Size = new System.Drawing.Size(200, 19);
             label5.TabIndex = 60;
@@ -296,7 +278,7 @@
             label6.BackColor = System.Drawing.Color.DarkSlateBlue;
             label6.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             label6.ForeColor = System.Drawing.Color.AliceBlue;
-            label6.Location = new System.Drawing.Point(530, 110);
+            label6.Location = new System.Drawing.Point(887, 451);
             label6.Name = "label6";
             label6.Size = new System.Drawing.Size(172, 19);
             label6.TabIndex = 63;
@@ -305,10 +287,10 @@
             // txtMedicamento
             // 
             txtMedicamento.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtMedicamento.Location = new System.Drawing.Point(521, 136);
+            txtMedicamento.Location = new System.Drawing.Point(887, 473);
             txtMedicamento.Multiline = true;
             txtMedicamento.Name = "txtMedicamento";
-            txtMedicamento.Size = new System.Drawing.Size(205, 44);
+            txtMedicamento.Size = new System.Drawing.Size(205, 37);
             txtMedicamento.TabIndex = 64;
             // 
             // label7
@@ -317,7 +299,7 @@
             label7.BackColor = System.Drawing.Color.DarkSlateBlue;
             label7.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             label7.ForeColor = System.Drawing.Color.AliceBlue;
-            label7.Location = new System.Drawing.Point(283, 209);
+            label7.Location = new System.Drawing.Point(459, 519);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(177, 19);
             label7.TabIndex = 65;
@@ -326,15 +308,15 @@
             // txtNumeroEmergencia
             // 
             txtNumeroEmergencia.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtNumeroEmergencia.Location = new System.Drawing.Point(275, 245);
+            txtNumeroEmergencia.Location = new System.Drawing.Point(470, 548);
             txtNumeroEmergencia.Name = "txtNumeroEmergencia";
-            txtNumeroEmergencia.Size = new System.Drawing.Size(218, 24);
+            txtNumeroEmergencia.Size = new System.Drawing.Size(120, 24);
             txtNumeroEmergencia.TabIndex = 66;
             // 
             // txtTutorNombre
             // 
             txtTutorNombre.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtTutorNombre.Location = new System.Drawing.Point(275, 314);
+            txtTutorNombre.Location = new System.Drawing.Point(657, 548);
             txtTutorNombre.Name = "txtTutorNombre";
             txtTutorNombre.Size = new System.Drawing.Size(218, 24);
             txtTutorNombre.TabIndex = 68;
@@ -345,7 +327,7 @@
             label8.BackColor = System.Drawing.Color.DarkSlateBlue;
             label8.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             label8.ForeColor = System.Drawing.Color.AliceBlue;
-            label8.Location = new System.Drawing.Point(275, 281);
+            label8.Location = new System.Drawing.Point(657, 515);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(143, 19);
             label8.TabIndex = 67;
@@ -357,7 +339,7 @@
             label9.BackColor = System.Drawing.Color.DarkSlateBlue;
             label9.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
             label9.ForeColor = System.Drawing.Color.AliceBlue;
-            label9.Location = new System.Drawing.Point(521, 281);
+            label9.Location = new System.Drawing.Point(900, 515);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(91, 19);
             label9.TabIndex = 69;
@@ -376,160 +358,14 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             dgvData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, EstudianteId, Codigo, Nombre, Apellido, Telefono, FechaRegistro, Enfermedad, Medicamento, TutorNombre, Parentesco, NumeroEmergencia, Sexo });
-            dgvData.Location = new System.Drawing.Point(741, 108);
+            dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { btnSeleccionar, EstudianteId, Codigo, Nombre, Apellido, Telefono, EstadoValor, Estado, FechaRegistro, Enfermedad, Medicamento, TutorNombre, Tutor, NumeroEmergencia, Sexo });
+            dgvData.Location = new System.Drawing.Point(0, 59);
             dgvData.MultiSelect = false;
             dgvData.Name = "dgvData";
             dgvData.ReadOnly = true;
-            dgvData.Size = new System.Drawing.Size(368, 454);
+            dgvData.Size = new System.Drawing.Size(1138, 302);
             dgvData.TabIndex = 71;
             dgvData.CellContentClick += dgvData_CellContentClick;
-            // 
-            // txtIndice
-            // 
-            txtIndice.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtIndice.Location = new System.Drawing.Point(12, 12);
-            txtIndice.Name = "txtIndice";
-            txtIndice.Size = new System.Drawing.Size(29, 24);
-            txtIndice.TabIndex = 73;
-            txtIndice.Text = "0";
-            txtIndice.Visible = false;
-            // 
-            // txtEstudianteID
-            // 
-            txtEstudianteID.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtEstudianteID.Location = new System.Drawing.Point(47, 12);
-            txtEstudianteID.Name = "txtEstudianteID";
-            txtEstudianteID.Size = new System.Drawing.Size(29, 24);
-            txtEstudianteID.TabIndex = 72;
-            txtEstudianteID.Text = "0";
-            txtEstudianteID.Visible = false;
-            // 
-            // txtTutor
-            // 
-            txtTutor.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtTutor.Location = new System.Drawing.Point(508, 314);
-            txtTutor.Name = "txtTutor";
-            txtTutor.Size = new System.Drawing.Size(218, 24);
-            txtTutor.TabIndex = 75;
-            // 
-            // txtSexo
-            // 
-            txtSexo.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtSexo.Location = new System.Drawing.Point(12, 441);
-            txtSexo.Name = "txtSexo";
-            txtSexo.Size = new System.Drawing.Size(48, 24);
-            txtSexo.TabIndex = 76;
-            // 
-            // txtFechaRegistro
-            // 
-            txtFechaRegistro.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtFechaRegistro.Location = new System.Drawing.Point(12, 376);
-            txtFechaRegistro.Name = "txtFechaRegistro";
-            txtFechaRegistro.Size = new System.Drawing.Size(218, 24);
-            txtFechaRegistro.TabIndex = 78;
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.BackColor = System.Drawing.Color.DarkSlateBlue;
-            label10.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
-            label10.ForeColor = System.Drawing.Color.AliceBlue;
-            label10.Location = new System.Drawing.Point(12, 339);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(134, 19);
-            label10.TabIndex = 77;
-            label10.Text = "Fecha de Registro";
-            // 
-            // btnBuscar
-            // 
-            btnBuscar.BackColor = System.Drawing.Color.DarkSlateBlue;
-            btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnBuscar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
-            btnBuscar.ForeColor = System.Drawing.Color.AliceBlue;
-            btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
-            btnBuscar.IconColor = System.Drawing.SystemColors.Window;
-            btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnBuscar.IconSize = 22;
-            btnBuscar.Location = new System.Drawing.Point(1003, 34);
-            btnBuscar.Name = "btnBuscar";
-            btnBuscar.Size = new System.Drawing.Size(49, 27);
-            btnBuscar.TabIndex = 83;
-            btnBuscar.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpiarBuscador
-            // 
-            btnLimpiarBuscador.BackColor = System.Drawing.Color.DarkSlateBlue;
-            btnLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
-            btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnLimpiarBuscador.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
-            btnLimpiarBuscador.ForeColor = System.Drawing.Color.AliceBlue;
-            btnLimpiarBuscador.IconChar = FontAwesome.Sharp.IconChar.Broom;
-            btnLimpiarBuscador.IconColor = System.Drawing.SystemColors.Window;
-            btnLimpiarBuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnLimpiarBuscador.IconSize = 22;
-            btnLimpiarBuscador.Location = new System.Drawing.Point(1058, 34);
-            btnLimpiarBuscador.Name = "btnLimpiarBuscador";
-            btnLimpiarBuscador.Size = new System.Drawing.Size(49, 27);
-            btnLimpiarBuscador.TabIndex = 82;
-            btnLimpiarBuscador.UseVisualStyleBackColor = false;
-            // 
-            // txtBuscar
-            // 
-            txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            txtBuscar.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            txtBuscar.Location = new System.Drawing.Point(825, 75);
-            txtBuscar.Multiline = true;
-            txtBuscar.Name = "txtBuscar";
-            txtBuscar.Size = new System.Drawing.Size(120, 27);
-            txtBuscar.TabIndex = 81;
-            // 
-            // cboBuscar
-            // 
-            cboBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cboBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            cboBuscar.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            cboBuscar.FormattingEnabled = true;
-            cboBuscar.Location = new System.Drawing.Point(825, 34);
-            cboBuscar.Name = "cboBuscar";
-            cboBuscar.Size = new System.Drawing.Size(120, 27);
-            cboBuscar.TabIndex = 80;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.BackColor = System.Drawing.Color.DarkSlateBlue;
-            label11.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label11.ForeColor = System.Drawing.Color.AliceBlue;
-            label11.Location = new System.Drawing.Point(712, 37);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(89, 19);
-            label11.TabIndex = 79;
-            label11.Text = "Filtrar por:";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = System.Drawing.Color.DarkSlateBlue;
-            label12.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            label12.ForeColor = System.Drawing.Color.AliceBlue;
-            label12.Location = new System.Drawing.Point(14, 487);
-            label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(106, 19);
-            label12.TabIndex = 84;
-            label12.Text = "Asignar Curso";
-            // 
-            // cbocursos
-            // 
-            cbocursos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            cbocursos.Font = new System.Drawing.Font("Sitka Small", 9.75F);
-            cbocursos.FormattingEnabled = true;
-            cbocursos.Location = new System.Drawing.Point(12, 521);
-            cbocursos.Name = "cbocursos";
-            cbocursos.Size = new System.Drawing.Size(205, 27);
-            cbocursos.TabIndex = 85;
-            cbocursos.SelectedIndexChanged += cbocursos_SelectedIndexChanged;
             // 
             // btnSeleccionar
             // 
@@ -570,6 +406,19 @@
             Telefono.Name = "Telefono";
             Telefono.ReadOnly = true;
             // 
+            // EstadoValor
+            // 
+            EstadoValor.HeaderText = "EstadoValor";
+            EstadoValor.Name = "EstadoValor";
+            EstadoValor.ReadOnly = true;
+            EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            Estado.HeaderText = "Estado";
+            Estado.Name = "Estado";
+            Estado.ReadOnly = true;
+            // 
             // FechaRegistro
             // 
             FechaRegistro.HeaderText = "Fecha de Registro";
@@ -594,11 +443,11 @@
             TutorNombre.Name = "TutorNombre";
             TutorNombre.ReadOnly = true;
             // 
-            // Parentesco
+            // Tutor
             // 
-            Parentesco.HeaderText = "Parentesco";
-            Parentesco.Name = "Parentesco";
-            Parentesco.ReadOnly = true;
+            Tutor.HeaderText = "Parentesco";
+            Tutor.Name = "Tutor";
+            Tutor.ReadOnly = true;
             // 
             // NumeroEmergencia
             // 
@@ -612,11 +461,209 @@
             Sexo.Name = "Sexo";
             Sexo.ReadOnly = true;
             // 
+            // txtIndice
+            // 
+            txtIndice.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtIndice.Location = new System.Drawing.Point(1043, 0);
+            txtIndice.Name = "txtIndice";
+            txtIndice.Size = new System.Drawing.Size(29, 24);
+            txtIndice.TabIndex = 73;
+            txtIndice.Text = "0";
+            txtIndice.Visible = false;
+            // 
+            // txtEstudianteID
+            // 
+            txtEstudianteID.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtEstudianteID.Location = new System.Drawing.Point(1078, 0);
+            txtEstudianteID.Name = "txtEstudianteID";
+            txtEstudianteID.Size = new System.Drawing.Size(29, 24);
+            txtEstudianteID.TabIndex = 72;
+            txtEstudianteID.Text = "0";
+            txtEstudianteID.Visible = false;
+            // 
+            // txtTutor
+            // 
+            txtTutor.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtTutor.Location = new System.Drawing.Point(887, 548);
+            txtTutor.Name = "txtTutor";
+            txtTutor.Size = new System.Drawing.Size(205, 24);
+            txtTutor.TabIndex = 75;
+            // 
+            // txtSexo
+            // 
+            txtSexo.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtSexo.Location = new System.Drawing.Point(470, 435);
+            txtSexo.Multiline = true;
+            txtSexo.Name = "txtSexo";
+            txtSexo.Size = new System.Drawing.Size(42, 23);
+            txtSexo.TabIndex = 76;
+            // 
+            // txtFechaRegistro
+            // 
+            txtFechaRegistro.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtFechaRegistro.Location = new System.Drawing.Point(264, 547);
+            txtFechaRegistro.Name = "txtFechaRegistro";
+            txtFechaRegistro.Size = new System.Drawing.Size(174, 24);
+            txtFechaRegistro.TabIndex = 78;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.BackColor = System.Drawing.Color.DarkSlateBlue;
+            label10.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
+            label10.ForeColor = System.Drawing.Color.AliceBlue;
+            label10.Location = new System.Drawing.Point(264, 513);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(134, 19);
+            label10.TabIndex = 77;
+            label10.Text = "Fecha de Registro";
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnBuscar.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
+            btnBuscar.ForeColor = System.Drawing.Color.AliceBlue;
+            btnBuscar.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btnBuscar.IconColor = System.Drawing.SystemColors.Window;
+            btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnBuscar.IconSize = 22;
+            btnBuscar.Location = new System.Drawing.Point(1046, 29);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new System.Drawing.Size(39, 27);
+            btnBuscar.TabIndex = 83;
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // btnLimpiarBuscador
+            // 
+            btnLimpiarBuscador.BackColor = System.Drawing.Color.DarkSlateBlue;
+            btnLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
+            btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnLimpiarBuscador.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold);
+            btnLimpiarBuscador.ForeColor = System.Drawing.Color.AliceBlue;
+            btnLimpiarBuscador.IconChar = FontAwesome.Sharp.IconChar.Broom;
+            btnLimpiarBuscador.IconColor = System.Drawing.SystemColors.Window;
+            btnLimpiarBuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnLimpiarBuscador.IconSize = 22;
+            btnLimpiarBuscador.Location = new System.Drawing.Point(1091, 30);
+            btnLimpiarBuscador.Name = "btnLimpiarBuscador";
+            btnLimpiarBuscador.Size = new System.Drawing.Size(39, 27);
+            btnLimpiarBuscador.TabIndex = 82;
+            btnLimpiarBuscador.UseVisualStyleBackColor = false;
+            btnLimpiarBuscador.Click += btnLimpiarBuscador_Click;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtBuscar.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            txtBuscar.Location = new System.Drawing.Point(879, 28);
+            txtBuscar.Multiline = true;
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new System.Drawing.Size(161, 30);
+            txtBuscar.TabIndex = 81;
+            // 
+            // cboBuscar
+            // 
+            cboBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cboBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            cboBuscar.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            cboBuscar.FormattingEnabled = true;
+            cboBuscar.Location = new System.Drawing.Point(741, 29);
+            cboBuscar.Name = "cboBuscar";
+            cboBuscar.Size = new System.Drawing.Size(120, 27);
+            cboBuscar.TabIndex = 80;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.BackColor = System.Drawing.Color.DarkSlateBlue;
+            label11.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label11.ForeColor = System.Drawing.Color.AliceBlue;
+            label11.Location = new System.Drawing.Point(646, 32);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(89, 19);
+            label11.TabIndex = 79;
+            label11.Text = "Filtrar por:";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.BackColor = System.Drawing.Color.DarkSlateBlue;
+            label12.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label12.ForeColor = System.Drawing.Color.AliceBlue;
+            label12.Location = new System.Drawing.Point(10, 519);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(106, 19);
+            label12.TabIndex = 84;
+            label12.Text = "Asignar Curso";
+            // 
+            // cbocursos
+            // 
+            cbocursos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cbocursos.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            cbocursos.FormattingEnabled = true;
+            cbocursos.Location = new System.Drawing.Point(10, 544);
+            cbocursos.Name = "cbocursos";
+            cbocursos.Size = new System.Drawing.Size(205, 27);
+            cbocursos.TabIndex = 85;
+            cbocursos.SelectedIndexChanged += cbocursos_SelectedIndexChanged;
+            // 
+            // cboEstado
+            // 
+            cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            cboEstado.Font = new System.Drawing.Font("Sitka Small", 9.75F);
+            cboEstado.FormattingEnabled = true;
+            cboEstado.Location = new System.Drawing.Point(470, 483);
+            cboEstado.Name = "cboEstado";
+            cboEstado.Size = new System.Drawing.Size(120, 27);
+            cboEstado.TabIndex = 87;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = System.Drawing.Color.DarkSlateBlue;
+            label13.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
+            label13.ForeColor = System.Drawing.Color.AliceBlue;
+            label13.Location = new System.Drawing.Point(470, 461);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(61, 19);
+            label13.TabIndex = 86;
+            label13.Text = "Estado:";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = System.Drawing.Color.DarkSlateBlue;
+            label14.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold);
+            label14.ForeColor = System.Drawing.Color.AliceBlue;
+            label14.Location = new System.Drawing.Point(471, 408);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(41, 19);
+            label14.TabIndex = 88;
+            label14.Text = "Sexo";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = System.Drawing.Color.DarkSlateBlue;
+            label4.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label4.ForeColor = System.Drawing.Color.AliceBlue;
+            label4.Location = new System.Drawing.Point(755, 408);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(221, 24);
+            label4.TabIndex = 58;
+            label4.Text = "DATOS DE EMERGENCIA\r\n";
+            // 
             // AdminEstudiantesFrm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1108, 566);
+            ClientSize = new System.Drawing.Size(1138, 612);
+            Controls.Add(label14);
+            Controls.Add(cboEstado);
+            Controls.Add(label13);
             Controls.Add(cbocursos);
             Controls.Add(label12);
             Controls.Add(btnBuscar);
@@ -643,7 +690,6 @@
             Controls.Add(label4);
             Controls.Add(txtApellido);
             Controls.Add(label2);
-            Controls.Add(lblSexo);
             Controls.Add(btnLimpiar);
             Controls.Add(btnEliminar);
             Controls.Add(btnGuardar);
@@ -669,7 +715,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblSexo;
         public FontAwesome.Sharp.IconButton btnLimpiar;
         public FontAwesome.Sharp.IconButton btnEliminar;
         public FontAwesome.Sharp.IconButton btnGuardar;
@@ -679,7 +724,6 @@
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblEstudiante;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEnfermedad;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -703,18 +747,24 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbocursos;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewButtonColumn btnSeleccionar;
         private System.Windows.Forms.DataGridViewTextBoxColumn EstudianteId;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EstadoValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaRegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Enfermedad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Medicamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn TutorNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroEmergencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sexo;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label4;
     }
 }

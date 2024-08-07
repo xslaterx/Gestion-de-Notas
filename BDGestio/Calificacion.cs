@@ -24,8 +24,46 @@ namespace BDGestion
         public int AcumuladoEX { get; set; }
         public int ExamenEx { get; set; }
         public int PuntuacionF { get; set; }
+        public int Promedio { get; set; }
+        public int CompletivoF { get; set; }
+        public int FinalEx {  get; set; }
 
         public virtual Estudiante Estudiante { get; set; }
         public virtual Curso Curso { get; set; }
+
+
+        // Calcular el promedio de los primeros 4 periodos
+        public int CalcularPromedioPeriodos()
+        {
+            return (PrimerP + SegundoP + TercerP + CuartoP) / 4;
+        }
+
+
+
+        // Calcular la puntuación final (70% promedio + 30% examen final)
+        public double CalcularPuntuacionFinal()
+        {
+            double promedioPeriodos = CalcularPromedioPeriodos();
+            return (promedioPeriodos * 0.7) + (ExamenF * 0.3);
+        }
+
+        // Calcular la puntuación final del completivo
+        public double CalcularPuntuacionFinalCompletivo(double acumuladoCompletivo)
+        {
+            return (ExamenC * 0.5) + acumuladoCompletivo;
+        }
+        // Calcular el acumulado extraordinario
+        public double CalcularAcumuladoExtraordinario(double puntuacionFinalCompletivo)
+        {
+            return puntuacionFinalCompletivo * 0.3;
+        }
+
+        // Calcular la puntuación final del extraordinario
+        public double CalcularPuntuacionFinalExtraordinario(double acumuladoExtraordinario)
+        {
+            return (ExamenEx * 0.7) + acumuladoExtraordinario;
+        }
     }
+
+
 }

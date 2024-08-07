@@ -34,16 +34,15 @@
             MenuUsuario = new FontAwesome.Sharp.IconMenuItem();
             MenuDocente = new FontAwesome.Sharp.IconMenuItem();
             MenuEstudiante = new FontAwesome.Sharp.IconMenuItem();
+            MenuAsistencia = new FontAwesome.Sharp.IconMenuItem();
             MenuAula = new FontAwesome.Sharp.IconMenuItem();
             MenuAsignatura = new FontAwesome.Sharp.IconMenuItem();
             MenuMantenimiento = new FontAwesome.Sharp.IconMenuItem();
-            MenuReporte = new FontAwesome.Sharp.IconMenuItem();
-            MenuAsistencia = new FontAwesome.Sharp.IconMenuItem();
+            iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             contenedor = new System.Windows.Forms.Panel();
             lblusuario = new System.Windows.Forms.Label();
             Titulotxt = new System.Windows.Forms.Label();
             MenuTitulo = new System.Windows.Forms.Panel();
-            iconMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             menuadmin.SuspendLayout();
             MenuTitulo.SuspendLayout();
             SuspendLayout();
@@ -74,22 +73,22 @@
             menuadmin.BackColor = System.Drawing.Color.Gainsboro;
             menuadmin.Dock = System.Windows.Forms.DockStyle.None;
             menuadmin.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            menuadmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { MenuUsuario, MenuDocente, MenuEstudiante, MenuAsistencia, MenuAula, MenuAsignatura, MenuMantenimiento, MenuReporte, iconMenuItem1 });
-            menuadmin.Location = new System.Drawing.Point(0, 28);
+            menuadmin.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { MenuUsuario, MenuDocente, MenuEstudiante, MenuAsistencia, MenuAula, MenuAsignatura, MenuMantenimiento, iconMenuItem1 });
+            menuadmin.Location = new System.Drawing.Point(0, 29);
             menuadmin.Name = "menuadmin";
             menuadmin.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            menuadmin.Size = new System.Drawing.Size(1141, 66);
+            menuadmin.Size = new System.Drawing.Size(1141, 50);
             menuadmin.TabIndex = 4;
             menuadmin.Text = "menuStrip1";
             // 
             // MenuUsuario
             // 
             MenuUsuario.AutoSize = false;
-            MenuUsuario.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            MenuUsuario.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             MenuUsuario.IconChar = FontAwesome.Sharp.IconChar.UserGroup;
             MenuUsuario.IconColor = System.Drawing.Color.Black;
             MenuUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuUsuario.IconSize = 26;
+            MenuUsuario.IconSize = 24;
             MenuUsuario.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             MenuUsuario.Name = "MenuUsuario";
             MenuUsuario.Size = new System.Drawing.Size(122, 62);
@@ -100,11 +99,11 @@
             // MenuDocente
             // 
             MenuDocente.AutoSize = false;
-            MenuDocente.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            MenuDocente.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             MenuDocente.IconChar = FontAwesome.Sharp.IconChar.UserTie;
             MenuDocente.IconColor = System.Drawing.Color.Black;
             MenuDocente.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuDocente.IconSize = 26;
+            MenuDocente.IconSize = 24;
             MenuDocente.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             MenuDocente.Name = "MenuDocente";
             MenuDocente.Size = new System.Drawing.Size(122, 62);
@@ -115,11 +114,11 @@
             // MenuEstudiante
             // 
             MenuEstudiante.AutoSize = false;
-            MenuEstudiante.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            MenuEstudiante.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             MenuEstudiante.IconChar = FontAwesome.Sharp.IconChar.UserGraduate;
             MenuEstudiante.IconColor = System.Drawing.Color.Black;
             MenuEstudiante.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuEstudiante.IconSize = 26;
+            MenuEstudiante.IconSize = 24;
             MenuEstudiante.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             MenuEstudiante.Name = "MenuEstudiante";
             MenuEstudiante.Size = new System.Drawing.Size(122, 62);
@@ -127,10 +126,25 @@
             MenuEstudiante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             MenuEstudiante.Click += MenuEstudiante_Click;
             // 
+            // MenuAsistencia
+            // 
+            MenuAsistencia.AutoSize = false;
+            MenuAsistencia.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            MenuAsistencia.IconChar = FontAwesome.Sharp.IconChar.Award;
+            MenuAsistencia.IconColor = System.Drawing.Color.Black;
+            MenuAsistencia.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            MenuAsistencia.IconSize = 24;
+            MenuAsistencia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            MenuAsistencia.Name = "MenuAsistencia";
+            MenuAsistencia.Size = new System.Drawing.Size(122, 62);
+            MenuAsistencia.Text = "Asistencia";
+            MenuAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            MenuAsistencia.Click += MenuAcerca_Click;
+            // 
             // MenuAula
             // 
             MenuAula.AutoSize = false;
-            MenuAula.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            MenuAula.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             MenuAula.IconChar = FontAwesome.Sharp.IconChar.School;
             MenuAula.IconColor = System.Drawing.Color.Black;
             MenuAula.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -145,11 +159,11 @@
             // MenuAsignatura
             // 
             MenuAsignatura.AutoSize = false;
-            MenuAsignatura.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            MenuAsignatura.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
             MenuAsignatura.IconChar = FontAwesome.Sharp.IconChar.Suitcase;
             MenuAsignatura.IconColor = System.Drawing.Color.Black;
             MenuAsignatura.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuAsignatura.IconSize = 26;
+            MenuAsignatura.IconSize = 24;
             MenuAsignatura.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             MenuAsignatura.Name = "MenuAsignatura";
             MenuAsignatura.Size = new System.Drawing.Size(122, 62);
@@ -164,7 +178,7 @@
             MenuMantenimiento.IconChar = FontAwesome.Sharp.IconChar.ScrewdriverWrench;
             MenuMantenimiento.IconColor = System.Drawing.Color.Black;
             MenuMantenimiento.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuMantenimiento.IconSize = 26;
+            MenuMantenimiento.IconSize = 24;
             MenuMantenimiento.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             MenuMantenimiento.Name = "MenuMantenimiento";
             MenuMantenimiento.Size = new System.Drawing.Size(122, 62);
@@ -172,41 +186,25 @@
             MenuMantenimiento.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             MenuMantenimiento.Click += MenuMantenimiento_Click;
             // 
-            // MenuReporte
+            // iconMenuItem1
             // 
-            MenuReporte.AutoSize = false;
-            MenuReporte.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            MenuReporte.IconChar = FontAwesome.Sharp.IconChar.BarChart;
-            MenuReporte.IconColor = System.Drawing.Color.Black;
-            MenuReporte.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuReporte.IconSize = 26;
-            MenuReporte.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            MenuReporte.Name = "MenuReporte";
-            MenuReporte.Size = new System.Drawing.Size(122, 62);
-            MenuReporte.Text = "Reportes";
-            MenuReporte.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            MenuReporte.Click += MenuReporte_Click;
-            // 
-            // MenuAsistencia
-            // 
-            MenuAsistencia.AutoSize = false;
-            MenuAsistencia.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            MenuAsistencia.IconChar = FontAwesome.Sharp.IconChar.Award;
-            MenuAsistencia.IconColor = System.Drawing.Color.Black;
-            MenuAsistencia.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            MenuAsistencia.IconSize = 26;
-            MenuAsistencia.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            MenuAsistencia.Name = "MenuAsistencia";
-            MenuAsistencia.Size = new System.Drawing.Size(122, 62);
-            MenuAsistencia.Text = "Asistencia";
-            MenuAsistencia.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            MenuAsistencia.Click += MenuAcerca_Click;
+            iconMenuItem1.AutoSize = false;
+            iconMenuItem1.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.Reply;
+            iconMenuItem1.IconColor = System.Drawing.Color.Black;
+            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            iconMenuItem1.IconSize = 24;
+            iconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            iconMenuItem1.Name = "iconMenuItem1";
+            iconMenuItem1.Size = new System.Drawing.Size(122, 62);
+            iconMenuItem1.Text = "Acerca de";
+            iconMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // contenedor
             // 
-            contenedor.Location = new System.Drawing.Point(0, 97);
+            contenedor.Location = new System.Drawing.Point(0, 82);
             contenedor.Name = "contenedor";
-            contenedor.Size = new System.Drawing.Size(1141, 608);
+            contenedor.Size = new System.Drawing.Size(1141, 666);
             contenedor.TabIndex = 5;
             // 
             // lblusuario
@@ -244,28 +242,14 @@
             MenuTitulo.Controls.Add(Titulotxt);
             MenuTitulo.Location = new System.Drawing.Point(0, 0);
             MenuTitulo.Name = "MenuTitulo";
-            MenuTitulo.Size = new System.Drawing.Size(1141, 25);
+            MenuTitulo.Size = new System.Drawing.Size(1141, 26);
             MenuTitulo.TabIndex = 3;
-            // 
-            // iconMenuItem1
-            // 
-            iconMenuItem1.AutoSize = false;
-            iconMenuItem1.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
-            iconMenuItem1.IconChar = FontAwesome.Sharp.IconChar.Reply;
-            iconMenuItem1.IconColor = System.Drawing.Color.Black;
-            iconMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconMenuItem1.IconSize = 26;
-            iconMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            iconMenuItem1.Name = "iconMenuItem1";
-            iconMenuItem1.Size = new System.Drawing.Size(122, 62);
-            iconMenuItem1.Text = "Acerca de";
-            iconMenuItem1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
             // AdminForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1143, 705);
+            ClientSize = new System.Drawing.Size(1143, 749);
             Controls.Add(contenedor);
             Controls.Add(MenuTitulo);
             Controls.Add(menuadmin);
@@ -292,7 +276,6 @@
         private FontAwesome.Sharp.IconMenuItem MenuDocente;
         private FontAwesome.Sharp.IconMenuItem MenuMantenimiento;
         private FontAwesome.Sharp.IconMenuItem MenuAsignatura;
-        private FontAwesome.Sharp.IconMenuItem MenuReporte;
         private FontAwesome.Sharp.IconMenuItem MenuAsistencia;
         private System.Windows.Forms.Panel contenedor;
         private System.Windows.Forms.Label nombreuser;

@@ -30,3 +30,18 @@ C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGest
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\refint\DBGestion.dll
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\DBGestion.pdb
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\BDGestio\obj\Debug\net8.0\ref\DBGestion.dll
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\bin\Debug\net8.0\DBGestion.deps.json
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\bin\Debug\net8.0\DBGestion.dll
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\bin\Debug\net8.0\DBGestion.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.csproj.AssemblyReference.cache
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.Properties.Resources.resources
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.csproj.GenerateResource.cache
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.AssemblyInfoInputs.cache
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.AssemblyInfo.cs
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.csproj.CoreCompileInputs.cache
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.sourcelink.json
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.dll
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\refint\DBGestion.dll
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\DBGestion.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\BDGestio\obj\Debug\net8.0\ref\DBGestion.dll

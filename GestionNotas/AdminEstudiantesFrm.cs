@@ -23,6 +23,16 @@ namespace GestionNotas
 
         private void AdminEstudiantesFrm_Load(object sender, EventArgs e)
         {
+
+            //METODO PARA LOS COMBOBOX
+            cboEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" });
+            cboEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Inactivo" });
+            cboEstado.DisplayMember = "Texto";
+            cboEstado.ValueMember = "Valor";
+            cboEstado.SelectedIndex = 0;
+
+
+
             foreach (DataGridViewColumn columna in dgvData.Columns)
             {
                 if (columna.Visible == true && columna.Name != "btnSeleccionar")
@@ -39,11 +49,11 @@ namespace GestionNotas
             foreach (Curso item in listacurso) { cbocursos.Items.Add(new OpcionCombo() { Valor = item.CursoId, Texto = item.Nombre }); }
             cbocursos.DisplayMember = "Texto";
             cbocursos.ValueMember = "Valor";
-           
 
 
 
-            //MOSTRAR TODOS LOS USUARIOS
+
+            //MOSTRAR TODOS LOS ESTUDIANTES
             List<Estudiante> listaEstudiante = new CN_Estudiante().Listar();
 
             foreach (Estudiante item in listaEstudiante)
@@ -55,6 +65,8 @@ namespace GestionNotas
                     item.Nombre,
                     item.Apellido,
                     item.Telefono,
+                    item.Estado == true ? 1 : 0,
+                    item.Estado == true ? "Activo" : "Inactivo",
                     item.FechaRegistro,
                     item.Enfermedad,
                     item.Medicamento,
@@ -87,7 +99,7 @@ namespace GestionNotas
                     txtEnfermedad.Text = dgvData.Rows[indice].Cells["Enfermedad"].Value.ToString();
                     txtMedicamento.Text = dgvData.Rows[indice].Cells["Medicamento"].Value.ToString();
                     txtTutorNombre.Text = dgvData.Rows[indice].Cells["TutorNombre"].Value.ToString();
-                    txtTutor.Text = dgvData.Rows[indice].Cells["Parentesco"].Value.ToString();
+                    txtTutor.Text = dgvData.Rows[indice].Cells["Tutor"].Value.ToString();
                     txtNumeroEmergencia.Text = dgvData.Rows[indice].Cells["NumeroEmergencia"].Value.ToString();
                     txtSexo.Text = dgvData.Rows[indice].Cells["Sexo"].Value.ToString();
 
@@ -108,6 +120,7 @@ namespace GestionNotas
                 Nombre = txtNombre.Text,
                 Apellido = txtApellido.Text,
                 Telefono = txtTelefono.Text,
+                Estado = Convert.ToInt32(((OpcionCombo)cboEstado.SelectedItem).Valor) == 1 ? true : false,
                 FechaRegistro = txtFechaRegistro.Text,
                 Enfermedad = txtEnfermedad.Text,
                 Medicamento = txtMedicamento.Text,
@@ -128,7 +141,9 @@ namespace GestionNotas
                 {
                     dgvData.Rows.Add(new object[]
                        { "", idestudiantegenerado,txtCodigo.Text, txtNombre.Text, txtApellido.Text,txtTelefono.Text,
-                           txtFechaRegistro.Text,txtEnfermedad.Text,txtMedicamento.Text,txtTutorNombre.Text,txtTutor.Text,txtNumeroEmergencia.Text,txtSexo.Text,
+                       ((OpcionCombo)cboEstado.SelectedItem).Valor.ToString(),
+                       ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString(),
+                       txtFechaRegistro.Text,txtEnfermedad.Text,txtMedicamento.Text,txtTutorNombre.Text,txtTutor.Text,txtNumeroEmergencia.Text,txtSexo.Text,
 
                     });
 
@@ -152,6 +167,8 @@ namespace GestionNotas
                     row.Cells["Nombre"].Value = txtNombre.Text;
                     row.Cells["Apellido"].Value = txtApellido.Text;
                     row.Cells["Telefono"].Value = txtTelefono.Text;
+                    row.Cells["EstadoValor"].Value = ((OpcionCombo)cboEstado.SelectedItem).Valor.ToString();
+                    row.Cells["Estado"].Value = ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString();
                     row.Cells["FechaRegistro"].Value = txtFechaRegistro.Text;
                     row.Cells["Enfermedad"].Value = txtEnfermedad.Text;
                     row.Cells["Medicamento"].Value = txtMedicamento.Text;
@@ -191,6 +208,65 @@ namespace GestionNotas
         private void cbocursos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string columnaFiltro = ((OpcionCombo)cboBuscar.SelectedItem).Valor.ToString();
+
+            if (dgvData.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dgvData.Rows)
+                {
+
+                    if (row.Cells[columnaFiltro].Value.ToString().Trim().ToUpper().Contains(txtBuscar.Text.Trim().ToUpper()))
+                        row.Visible = true;
+                    else
+                        row.Visible = false;
+                }
+            }
+        }
+
+        private void btnLimpiarBuscador_Click(object sender, EventArgs e)
+        {
+            txtBuscar.Text = "";
+            foreach (DataGridViewRow row in dgvData.Rows)
+            {
+                row.Visible = true;
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToInt32(txtEstudianteID.Text) != 0)
+            {
+                if (MessageBox.Show("¿Desea eliminar el estudiante", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    string mensaje = string.Empty;
+                    Estudiante objestudiante = new Estudiante()
+                    {
+                        EstudianteId = Convert.ToInt32(txtEstudianteID.Text)
+                    };
+
+                    bool respuesta = new CD_Estudiante().Eliminar(objestudiante, out mensaje);
+
+                    if (respuesta)
+                    {
+                        dgvData.Rows.RemoveAt(Convert.ToInt32(txtIndice.Text));
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                }
+            }
         }
     }
 }

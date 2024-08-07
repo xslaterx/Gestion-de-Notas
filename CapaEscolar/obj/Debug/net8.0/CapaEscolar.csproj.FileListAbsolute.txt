@@ -35,3 +35,21 @@ C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\Cap
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.sourcelink.json
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.csproj.CopyComplete
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaEscolar\obj\Debug\net8.0\ref\CapaEscolar.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\bin\Debug\net8.0\CapaEscolar.deps.json
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\bin\Debug\net8.0\CapaEscolar.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\bin\Debug\net8.0\CapaEscolar.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\bin\Debug\net8.0\CapaDatos.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\bin\Debug\net8.0\DBGestion.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\bin\Debug\net8.0\DBGestion.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\bin\Debug\net8.0\CapaDatos.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.csproj.AssemblyReference.cache
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.AssemblyInfoInputs.cache
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.AssemblyInfo.cs
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.csproj.CoreCompileInputs.cache
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.sourcelink.json
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEsco.F457A7D2.Up2Date
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\refint\CapaEscolar.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\CapaEscolar.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\CapaEscolar\obj\Debug\net8.0\ref\CapaEscolar.dll
