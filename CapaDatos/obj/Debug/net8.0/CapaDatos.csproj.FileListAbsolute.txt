@@ -31,3 +31,19 @@ C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\bin\Debug\net8.0\DBGes
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\bin\Debug\net8.0\DBGestion.pdb
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.CopyComplete
 C:\Users\Sheymor\RiderProjects\Gestion-de-Notas\CapaDatos\obj\Debug\net8.0\ref\CapaDatos.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\bin\Debug\net8.0\CapaDatos.deps.json
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\bin\Debug\net8.0\CapaDatos.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\bin\Debug\net8.0\CapaDatos.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\bin\Debug\net8.0\DBGestion.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\bin\Debug\net8.0\DBGestion.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.AssemblyInfoInputs.cache
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.AssemblyInfo.cs
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.sourcelink.json
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.csproj.Up2Date
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\refint\CapaDatos.dll
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\CapaDatos.pdb
+C:\Users\yefri\Desktop\Sistema de Notas\CapaDatos\obj\Debug\net8.0\ref\CapaDatos.dll

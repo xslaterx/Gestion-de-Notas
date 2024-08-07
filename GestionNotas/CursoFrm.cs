@@ -49,7 +49,7 @@ namespace GestionNotas
                 }
 
 
-                else { MessageBox.Show(Mensaje); }
+                else { MessageBox.Show("Curso registrado Exitosamenrte"); }
 
                 Limpiar();
             }

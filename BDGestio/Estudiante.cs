@@ -12,8 +12,8 @@ namespace BDGestion
         [Key]
         public int EstudianteId { get; set; }
         public string Codigo { get; set; }  
-        public required string Nombre { get; set; }
-        public required string Apellido { get; set; }
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
         public string Telefono { get; set; }    
         public bool Estado { get; set; }
         public string FechaRegistro { get; set; }
@@ -23,6 +23,6 @@ namespace BDGestion
         public string TutorNombre { get; set; }
         public string Tutor {  get; set; }  
         public string Sexo      { get; set; }
-        public virtual required ICollection<Calificacion> Calificaciones { get; set; }
+        public virtual  ICollection<Calificacion> Calificaciones { get; set; }
     }
 }
