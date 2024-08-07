@@ -32,15 +32,23 @@ namespace GestionNotas
             cboEstado.SelectedIndex = 0;
 
 
-
             List<Curso> listacurso = new CN_Cursos().Listar();
-            foreach (Curso item in listacurso) { cboCurso.Items.Add(new OpcionCombo() { Valor = item.CursoId, Texto = item.Nombre }); }
+            foreach (Curso item in listacurso)
+            {
+                cboCurso.Items.Add(new OpcionCombo() { Valor = item.CursoId, Texto = item.Nombre });
+            }
+
             cboCurso.DisplayMember = "Texto";
             cboCurso.ValueMember = "Valor";
             cboCurso.SelectedIndex = 0;
 
             List<Asignatura> listaasignatura = new CN_Asignatura().Listar();
-            foreach (Asignatura item in listaasignatura) { cboAsignatura.Items.Add(new OpcionCombo() { Valor = item.AsignaturaId, Texto = item.Nombre_asignatura }); }
+            foreach (Asignatura item in listaasignatura)
+            {
+                cboAsignatura.Items.Add(new OpcionCombo()
+                    { Valor = item.AsignaturaId, Texto = item.Nombre_asignatura });
+            }
+
             cboAsignatura.DisplayMember = "Texto";
             cboAsignatura.ValueMember = "Valor";
             cboAsignatura.SelectedIndex = 0;
@@ -51,55 +59,68 @@ namespace GestionNotas
 
             foreach (Asistencia item in listaAsistencia)
             {
-
-                dgvData.Rows.Add(new object[]{"",
+                dgvData.Rows.Add(new object[]
+                {
+                    "",
                     item.AsistenciaId,
                     // item.Codigo,
                     // item.Nombre,
                     item.Estado == true ? 1 : 0,
                     item.Estado == true ? "Presente" : "Ausente",
                 });
-
-
             }
-
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string Mensaje = string.Empty;
+            CN_Estudiante estudianteDb = new();
+            var estudiante = estudianteDb.Listar()
+                .FirstOrDefault(w => w.Codigo == txtCodigo.Text && w.Nombre == txtNombre.Text);
+            int estudianteId = 0;
+            if (estudiante is not null)
+            {
+                estudianteId = estudiante.EstudianteId;
+            }
 
             Asistencia objasistencia = new Asistencia()
             {
                 AsistenciaId = Convert.ToInt32(txtAsistenciaID.Text),
-                // Codigo = txtCodigo.Text,
-                // Nombre = txtNombre.Text,               
+                EstudianteId = estudianteId,
+                CursoId = Convert.ToInt32(((OpcionCombo)cboCurso.SelectedItem).Valor),
+                AsignaturaId = Convert.ToInt32(((OpcionCombo)cboCurso.SelectedItem).Valor),
+                Estudiante = estudiante ?? new(),
                 Curso = new Curso() { CursoId = Convert.ToInt32(((OpcionCombo)cboCurso.SelectedItem).Valor) },
-                Asignatura = new Asignatura() { AsignaturaId = Convert.ToInt32(((OpcionCombo)cboAsignatura.SelectedItem).Valor) },
+                Asignatura = new Asignatura()
+                    { AsignaturaId = Convert.ToInt32(((OpcionCombo)cboAsignatura.SelectedItem).Valor) },
                 Estado = Convert.ToInt32(((OpcionCombo)cboEstado.SelectedItem).Valor) == 1 ? true : false
             };
 
+
             if (objasistencia.AsistenciaId == 0)
             {
-
                 int idasistenciagenerado = new CN_Asistencia().Registrar(objasistencia, out Mensaje);
 
                 if (idasistenciagenerado != 0)
                 {
                     dgvData.Rows.Add(new object[]
-                       { "", idasistenciagenerado,txtCodigo.Text, txtNombre.Text, 
-                           // txtContrasena.Text,
-                       // ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(),
-                       // ((OpcionCombo)cboRol.SelectedItem).Valor.ToString(),
-                       ((OpcionCombo)cboEstado.SelectedItem).Valor.ToString(),
-                       ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString(),
+                    {
+                        "", idasistenciagenerado, txtCodigo.Text, txtNombre.Text,
+                        // txtContrasena.Text,
+                        // ((OpcionCombo)cboRol.SelectedItem).Texto.ToString(),
+                        // ((OpcionCombo)cboRol.SelectedItem).Valor.ToString(),
+                        ((OpcionCombo)cboEstado.SelectedItem).Valor.ToString(),
+                        ((OpcionCombo)cboEstado.SelectedItem).Texto.ToString(),
                     });
 
                     // Limpiar();
-                } 
+                }
 
 
-                else { MessageBox.Show(Mensaje); }
+                else
+                {
+                    MessageBox.Show(Mensaje);
+                }
 
                 // Limpiar();
             }
@@ -126,7 +147,6 @@ namespace GestionNotas
                 //     MessageBox.Show(Mensaje);
                 // }
             }
-        
-    }
+        }
     }
 }

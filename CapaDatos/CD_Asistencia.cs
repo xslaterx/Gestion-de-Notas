@@ -31,7 +31,7 @@ namespace CapaDatos
             try
             {
                 string query =
-                    "INSERT INTO Asistencias (Estado, CursoId, AsignaturaId, EstudianteId, date) VALUES (@Estado, @CursoId, @AsignaturaId, @EstudianteId, @date); SELECT last_insert_rowid();";
+                    "INSERT INTO Asistencias (Estado, CursoId, AsignaturaId, EstudianteId, date) VALUES (@Estado, @CursoId, @AsignaturaId, @EstudianteId, @date)";
                 idAsistenciaGenerado = _db.ExecuteScalar<int>(query, obj);
             }
             catch (Exception e)
