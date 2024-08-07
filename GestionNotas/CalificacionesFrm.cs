@@ -185,7 +185,7 @@ namespace GestionNotas
                 finalEx = Convert.ToInt32(txtPuntuacionFF.Text);
             }
 
-            Calificacion objcalificacion = new Calificacion(calificacionId,1,1,0,primerP,puntuacionF,promedio,segundoP,tercerP,cuartoP,examenF,acumuladoC,examenC,acumuladoEX,examenEx,completivoF,finalEx);
+            Calificacion objcalificacion = new Calificacion(calificacionId,1,1,primerP,puntuacionF,promedio,segundoP,tercerP,cuartoP,examenF,acumuladoC,examenC,acumuladoEX,examenEx,completivoF,finalEx);
 
             if (objcalificacion.CalificacionId == 0)
             {

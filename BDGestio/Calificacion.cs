@@ -35,12 +35,11 @@ namespace BDGestion
             
         }
 
-        public Calificacion(int calificacionId , int estudianteId, int cursoId, decimal nota, int primerP, double puntuacionF, double promedio, int segundoP =0, int tercerP=0, int cuartoP=0, int examenF=0, int acumuladoC=0, int examenC=0, int acumuladoEX=0, int examenEx=0, int completivoF=0, int finalEx=0)
+        public Calificacion(int calificacionId , int estudianteId, int cursoId, int primerP, double puntuacionF, double promedio, int segundoP =0, int tercerP=0, int cuartoP=0, int examenF=0, int acumuladoC=0, int examenC=0, int acumuladoEX=0, int examenEx=0, int completivoF=0, int finalEx=0)
         {
             CalificacionId = calificacionId;
             EstudianteId = estudianteId;
             CursoId = cursoId;
-            Nota = nota;
             PrimerP = primerP;
             SegundoP = segundoP;
             TercerP = tercerP;
