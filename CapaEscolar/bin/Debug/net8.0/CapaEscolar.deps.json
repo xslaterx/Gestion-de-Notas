@@ -348,7 +348,8 @@
       "CapaDatos/1.0.0": {
         "dependencies": {
           "DBGestion": "1.0.0",
-          "Dapper": "2.1.35"
+          "Dapper": "2.1.35",
+          "Microsoft.Data.Sqlite.Core": "8.0.7"
         },
         "runtime": {
           "CapaDatos.dll": {}

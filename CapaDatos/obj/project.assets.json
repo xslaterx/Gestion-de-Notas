@@ -1236,39 +1236,37 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "DBGestion >= 1.0.0",
-      "Dapper >= 2.1.35"
+      "Dapper >= 2.1.35",
+      "Microsoft.Data.Sqlite.Core >= 8.0.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yefri\\.nuget\\packages\\": {}
+    "C:\\Users\\Sheymor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\CapaDatos.csproj",
+      "projectUniqueName": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\CapaDatos.csproj",
       "projectName": "CapaDatos",
-      "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\CapaDatos.csproj",
-      "packagesPath": "C:\\Users\\yefri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\CapaDatos\\obj\\",
+      "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\CapaDatos.csproj",
+      "packagesPath": "C:\\Users\\Sheymor\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\CapaDatos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\yefri\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Sheymor\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj": {
-              "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj"
+            "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj": {
+              "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj"
             }
           }
         }
@@ -1277,11 +1275,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -1291,6 +1284,10 @@
           "Dapper": {
             "target": "Package",
             "version": "[2.1.35, )"
+          },
+          "Microsoft.Data.Sqlite.Core": {
+            "target": "Package",
+            "version": "[8.0.7, )"
           }
         },
         "imports": [
@@ -1309,7 +1306,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.107/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

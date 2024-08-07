@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj": {}
+    "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj": {
+    "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj",
+        "projectUniqueName": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj",
         "projectName": "DBGestion",
-        "projectPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\DBGestion.csproj",
-        "packagesPath": "C:\\Users\\yefri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yefri\\Desktop\\Sistema de Notas\\BDGestio\\obj\\",
+        "projectPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\DBGestion.csproj",
+        "packagesPath": "C:\\Users\\Sheymor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sheymor\\RiderProjects\\Gestion-de-Notas\\BDGestio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\yefri\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Sheymor\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -35,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -71,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.107/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
